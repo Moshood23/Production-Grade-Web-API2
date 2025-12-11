@@ -1,0 +1,709 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\production-grade-web-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\production-grade-web-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\controllers\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\controllers\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\interfaces\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\interfaces\\authresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\infrastructure\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\infrastructure\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\middleware\\globalexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\middleware\\globalexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\common\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\common\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\wwwroot\\images\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\wwwroot\\images\\temp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\wwwroot\\images\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\wwwroot\\images\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\services\\categoryresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\services\\categoryresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\domain\\entities\\picture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\domain\\entities\\picture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\mappings\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\mappings\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\mappings\\userprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\mappings\\userprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\mappings\\createcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\mappings\\createcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\infrastructure\\services\\skugenerationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\infrastructure\\services\\skugenerationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\infrastructure\\services\\ordernumbergenerationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\infrastructure\\services\\ordernumbergenerationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\interfaces\\iskugenerationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\interfaces\\iskugenerationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\interfaces\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\interfaces\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\dtos\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\dtos\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 194,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CartsController.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\CartsController.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Controllers\\CartsController.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\CartsController.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Controllers\\CartsController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAcwIsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:07:23.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:06:47.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAiwH0AAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:07:38.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAIwLEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:07:05.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Program.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Program.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Program.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:19:02.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Mappings\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Mappings\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Mappings\\MappingProfile.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Mappings\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T12:22:34.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:06:14.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\AuthResponseDto.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Interfaces\\AuthResponseDto.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\AuthResponseDto.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Interfaces\\AuthResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:40:47.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\AuthService.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:20:09.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Infrastructure\\Services\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Infrastructure\\Services\\JwtTokenService.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Infrastructure\\Services\\JwtTokenService.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Infrastructure\\Services\\JwtTokenService.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAmwFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:26:08.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\appsettings.json",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\appsettings.json",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\appsettings.json",
+              "RelativeToolTip": "Production-Grade-Web-API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-11T16:20:54.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T12:25:00.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GlobalExceptionHandlerMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAmwEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:09:19.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Common\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Common\\ApiResponse.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Common\\ApiResponse.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Common\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:08:31.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "temp.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\wwwroot\\images\\temp.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\wwwroot\\images\\temp.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\wwwroot\\images\\temp.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\wwwroot\\images\\temp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:11:33.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "products.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\wwwroot\\images\\products.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\wwwroot\\images\\products.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\wwwroot\\images\\products.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\wwwroot\\images\\products.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:11:15.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CategoryResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\CategoryResponseDto.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Services\\CategoryResponseDto.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\CategoryResponseDto.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Services\\CategoryResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T14:33:47.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Picture.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Entities\\Picture.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Entities\\Picture.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Entities\\Picture.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Domain\\Entities\\Picture.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T14:18:57.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\ProductService.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Services\\ProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:20:43.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Services\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\CategoryService.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Services\\CategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:20:25.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\RegisterDto.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\DTOs\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:36:50.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Entities\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Domain\\Entities\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T14:23:15.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\OrderService.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Services\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:21:13.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Mappings\\Profile.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Mappings\\Profile.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Mappings\\Profile.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Mappings\\Profile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T14:05:42.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Services\\CartService.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\CartService.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Services\\CartService.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAgwGMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:20:59.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "OrderNumberGenerationService.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Infrastructure\\Services\\OrderNumberGenerationService.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Infrastructure\\Services\\OrderNumberGenerationService.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Infrastructure\\Services\\OrderNumberGenerationService.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Infrastructure\\Services\\OrderNumberGenerationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:16:03.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SkuGenerationService.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Infrastructure\\Services\\SkuGenerationService.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Infrastructure\\Services\\SkuGenerationService.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Infrastructure\\Services\\SkuGenerationService.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Infrastructure\\Services\\SkuGenerationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:15:30.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ISkuGenerationService.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\ISkuGenerationService.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Interfaces\\ISkuGenerationService.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\ISkuGenerationService.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Interfaces\\ISkuGenerationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:13:16.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\IOrderService.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Interfaces\\IOrderService.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\IOrderService.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Interfaces\\IOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:12:19.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ICartService.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\ICartService.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Interfaces\\ICartService.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\ICartService.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Interfaces\\ICartService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:11:33.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Interfaces\\IProductService.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Interfaces\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:10:36.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CreateProductDto.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\CreateProductDto.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\CreateProductDto.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\CreateProductDto.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\DTOs\\CreateProductDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T12:28:30.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Interfaces\\ICategoryService.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\ICategoryService.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Interfaces\\ICategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T12:27:01.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UserProfileDto.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Mappings\\UserProfileDto.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Mappings\\UserProfileDto.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Mappings\\UserProfileDto.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Mappings\\UserProfileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T12:22:37.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CreateCategoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Mappings\\CreateCategoryDto.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Mappings\\CreateCategoryDto.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Mappings\\CreateCategoryDto.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Application\\Mappings\\CreateCategoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T12:22:30.507Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "0cf21391-e046-437b-a84d-dd95586f10d2",
+        "Display": 0,
+        "X": 0,
+        "Y": 69,
+        "Width": 800,
+        "Height": 600,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Production-Grade-Web-API",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Production-Grade-Web-API.csproj",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Production-Grade-Web-API.csproj",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Production-Grade-Web-API.csproj",
+              "RelativeToolTip": "Production-Grade-Web-API\\Production-Grade-Web-API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-11T16:57:44.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
