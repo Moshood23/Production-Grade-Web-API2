@@ -1,4 +1,4 @@
-﻿namespace Production.Grade.WebApi.Application.Mappings
+﻿namespace Production.Grade.WebApi.Application.DTOs
 {
     public class UserProfileDto
     {

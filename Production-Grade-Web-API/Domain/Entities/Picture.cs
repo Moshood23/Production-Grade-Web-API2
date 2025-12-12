@@ -8,4 +8,5 @@ public class Picture : BaseEntity
     public int DisplayOrder { get; set; }
     public int OrderID { get; set; }
     public Product? Product { get; set; }
+    public object? AddedAt { get; internal set; }
 }

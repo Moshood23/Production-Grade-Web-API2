@@ -1,18 +1,18 @@
-﻿namespace Production.Grade.WebApi.Application.Services;
+﻿
+namespace Production.Grade.WebApi.Application.Services;
 
 using AutoMapper;
 using Production.Grade.WebApi.Application.Interfaces;
 using Production.Grade.WebApi.Domain.Entities;
 using Production.Grade.WebApi.Domain.Interfaces;
-using Production_Grade_Web_API.Application.DTO;
-using Production_Grade_Web_API.Application.Interfaces;
+using Production.Grade.WebApi.Application.DTO;
 
 public class CartService : ICartService
 {
     private readonly IUnitOfWork _unitOfWork;
-    private readonly IMapper _mapper;
+    private readonly AutoMapper.IMapper _mapper;
 
-    public CartService(IUnitOfWork unitOfWork, IMapper mapper)
+    public CartService(IUnitOfWork unitOfWork, AutoMapper.IMapper mapper)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;

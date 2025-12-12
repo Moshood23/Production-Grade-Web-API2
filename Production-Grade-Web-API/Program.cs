@@ -1,16 +1,15 @@
+using AutoMapper;
 using System.Text;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Production.Grade.WebApi.API.Middleware;
 using Production.Grade.WebApi.Application.Interfaces;
-using Production.Grade.WebApi.Application.Mappings;
 using Production.Grade.WebApi.Application.Services;
 using Production.Grade.WebApi.Application.Validators;
 using Production.Grade.WebApi.Domain.Interfaces;
 using Production.Grade.WebApi.Infrastructure.Data;
 using Production.Grade.WebApi.Infrastructure.Services;
-using Production_Grade_Web_API.Application.Interfaces;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,7 +20,7 @@ var jwtExpireMinutes = int.Parse(builder.Configuration["Jwt:ExpireMinutes"] ?? "
 builder.Services.AddSerilog(new LoggerConfiguration()
     .MinimumLevel.Information()
     .WriteTo.Console()
-    .WriteTo.File("logs/log-.txt", rollingInterval: (Serilog.RollingInterval)RollingInterval.Day)
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger());
 
 builder.Services.AddControllers();
@@ -66,11 +65,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-builder.Services.AddValidatorsFromAssemblyContaining(typeof(RegisterDtoValidator), ServiceLifetime.Scoped);
-
+builder.Services.AddValidatorsFromAssemblyContaining<RegisterDtoValidator>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
@@ -78,6 +73,7 @@ builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<ISkuGenerationService, SkuGenerationService>();
 builder.Services.AddScoped<IOrderNumberGenerationService, OrderNumberGenerationService>();
+builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer(options =>
@@ -131,7 +127,7 @@ app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 
 app.UseAuthentication();
 app.UseAuthorization();
-
+ 
 app.MapControllers();
 
 try

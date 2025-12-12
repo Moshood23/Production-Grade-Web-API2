@@ -1,4 +1,4 @@
-﻿namespace Production_Grade_Web_API.Application.DTO
+﻿namespace Production.Grade.WebApi.Application.DTO
 {
     public class PictureResponseDto
     {

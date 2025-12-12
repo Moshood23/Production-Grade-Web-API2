@@ -4,10 +4,10 @@ using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Production.Grade.WebApi.API.Common;
+using Production.Grade.WebApi.Application.DTOs;
 using Production.Grade.WebApi.Application.Interfaces;
-using Production.Grade.WebApi.Application.Mappings;
+using Production.Grade.WebApi.Application.Validators;
 using Production_Grade_Web_API.Application.DTOs;
-using Production_Grade_Web_API.Application.Validators;
 
 [ApiController]
 [Route("api/v1/[controller]")]

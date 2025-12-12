@@ -1,13 +1,12 @@
-﻿namespace Production.Grade.WebApi.API.Controllers;
-
+﻿
 using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Production.Grade.WebApi.API.Common;
 using Production.Grade.WebApi.Application.Interfaces;
-using Production_Grade_Web_API.Application.DTO;
-using Production_Grade_Web_API.Application.Interfaces;
+using Production.Grade.WebApi.Application.DTO;
 
+namespace Production.Grade.WebApi.API.Controllers;
 [ApiController]
 [Route("api/v1/[controller]")]
 [Authorize]

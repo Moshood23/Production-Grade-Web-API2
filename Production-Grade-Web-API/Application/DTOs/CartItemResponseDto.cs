@@ -1,4 +1,4 @@
-﻿namespace Production_Grade_Web_API.Application.DTO
+﻿namespace Production.Grade.WebApi.Application.DTO
 {
     public class CartItemResponseDto
     {
@@ -7,8 +7,8 @@
         public string ProductName { get; set; } = string.Empty;
         public string ProductSku { get; set; } = string.Empty;
         public int Quantity { get; set; }
-        public decimal PriceAtAddTime { get; set; }
-        public decimal LineTotal { get; set; }
+        public int PriceAtAddTime { get; set; }
+        public int LineTotal { get; set; }
         public DateTime AddedAt { get; set; }
     }
 }
