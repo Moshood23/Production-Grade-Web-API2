@@ -162,3 +162,5 @@ C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API\bi
 C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

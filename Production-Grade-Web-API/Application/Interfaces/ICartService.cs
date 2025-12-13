@@ -1,4 +1,5 @@
-﻿using Production.Grade.WebApi.Application.DTO;
+﻿using AutoMapper;
+using Production.Grade.WebApi.Application.DTO;
 
 namespace Production.Grade.WebApi.Application.Interfaces
 {

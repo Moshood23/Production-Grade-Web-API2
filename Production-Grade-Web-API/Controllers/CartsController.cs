@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Production.Grade.WebApi.API.Common;
 using Production.Grade.WebApi.Application.Interfaces;
 using Production.Grade.WebApi.Application.DTO;
-using Production.Grade.WebApi.Application.Interfaces;
 
 [ApiController]
 [Route("api/v1/[controller]")]

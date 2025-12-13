@@ -86,7 +86,7 @@ public class CartService : ICartService
 
         var product = await _unitOfWork.Products.GetByIdAsync(cartItem.ProductId);
         if (product == null || product.Quantity < dto.Quantity)
-            throw new InvalidOperationException($"Insufficient stock. Available: {product.Quantity}");
+            throw new InvalidOperationException($"Insufficient stock. Available: {product?.Quantity}");
 
         cartItem.Quantity = dto.Quantity;
         cartItem.UpdatedBy = userId;

@@ -1,0 +1,672 @@
+2025-12-13 08:50:01.067 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:01.141 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:01.394 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:01.394 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:28.476 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:28.517 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:30.642 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:30.642 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:31.334 +00:00 [INF] Executed DbCommand (629ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [ProductionGradeWebApiDb];
+2025-12-13 08:50:31.687 +00:00 [INF] Executed DbCommand (348ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [ProductionGradeWebApiDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-12-13 08:50:31.715 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 08:50:31.823 +00:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2025-12-13 08:50:31.827 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 08:50:31.855 +00:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 08:50:31.928 +00:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 08:50:31.946 +00:00 [INF] Applying migration '20251213085004_InitialCreate'.
+2025-12-13 08:50:32.061 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ApplicationUsers] (
+    [Id] uniqueidentifier NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [Username] nvarchar(100) NOT NULL,
+    [FullName] nvarchar(200) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(20) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [LastLoginAt] datetime2 NULL,
+    [IsActive] bit NOT NULL DEFAULT CAST(1 AS bit),
+    CONSTRAINT [PK_ApplicationUsers] PRIMARY KEY ([Id])
+);
+2025-12-13 08:50:32.077 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Carts] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [LastModifiedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Carts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Carts_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 08:50:32.094 +00:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(500) NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Categories_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 08:50:32.128 +00:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrderNumber] nvarchar(50) NOT NULL,
+    [TotalPrice] decimal(18,2) NOT NULL DEFAULT 0.0,
+    [Status] int NOT NULL DEFAULT 1,
+    [UserId] uniqueidentifier NOT NULL,
+    [OrderDate] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [Notes] nvarchar(500) NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Order_TotalPrice] CHECK ([TotalPrice] >= 0),
+    CONSTRAINT [FK_Orders_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 08:50:32.190 +00:00 [ERR] Failed executing DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [SKU] nvarchar(50) NOT NULL,
+    [Name] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL DEFAULT 0,
+    [Status] int NOT NULL DEFAULT 1,
+    [CategoryId] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [RowVersion] rowversion NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Product_Price] CHECK ([Price] > 0),
+    CONSTRAINT [CK_Product_Quantity] CHECK ([Quantity] >= 0),
+    CONSTRAINT [FK_Products_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Products_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 08:56:49.808 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:56:49.856 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:56:50.061 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:56:50.061 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:57:59.034 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:57:59.084 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:57:59.755 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 08:57:59.796 +00:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 08:57:59.799 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 08:57:59.800 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 08:57:59.846 +00:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 08:57:59.865 +00:00 [INF] Applying migration '20251213085004_InitialCreate'.
+2025-12-13 08:57:59.974 +00:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ApplicationUsers] (
+    [Id] uniqueidentifier NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [Username] nvarchar(100) NOT NULL,
+    [FullName] nvarchar(200) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(20) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [LastLoginAt] datetime2 NULL,
+    [IsActive] bit NOT NULL DEFAULT CAST(1 AS bit),
+    CONSTRAINT [PK_ApplicationUsers] PRIMARY KEY ([Id])
+);
+2025-12-13 08:57:59.981 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Carts] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [LastModifiedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Carts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Carts_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 08:57:59.987 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(500) NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Categories_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 08:57:59.999 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrderNumber] nvarchar(50) NOT NULL,
+    [TotalPrice] decimal(18,2) NOT NULL DEFAULT 0.0,
+    [Status] int NOT NULL DEFAULT 1,
+    [UserId] uniqueidentifier NOT NULL,
+    [OrderDate] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [Notes] nvarchar(500) NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Order_TotalPrice] CHECK ([TotalPrice] >= 0),
+    CONSTRAINT [FK_Orders_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 08:58:00.044 +00:00 [ERR] Failed executing DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [SKU] nvarchar(50) NOT NULL,
+    [Name] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL DEFAULT 0,
+    [Status] int NOT NULL DEFAULT 1,
+    [CategoryId] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [RowVersion] rowversion NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Product_Price] CHECK ([Price] > 0),
+    CONSTRAINT [CK_Product_Quantity] CHECK ([Quantity] >= 0),
+    CONSTRAINT [FK_Products_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Products_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:04:42.430 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:04:42.461 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:04:42.784 +00:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:04:42.817 +00:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:04:42.821 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:04:42.823 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:04:42.868 +00:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 09:04:42.882 +00:00 [INF] Applying migration '20251213085004_InitialCreate'.
+2025-12-13 09:04:43.011 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ApplicationUsers] (
+    [Id] uniqueidentifier NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [Username] nvarchar(100) NOT NULL,
+    [FullName] nvarchar(200) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(20) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [LastLoginAt] datetime2 NULL,
+    [IsActive] bit NOT NULL DEFAULT CAST(1 AS bit),
+    CONSTRAINT [PK_ApplicationUsers] PRIMARY KEY ([Id])
+);
+2025-12-13 09:04:43.017 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Carts] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [LastModifiedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Carts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Carts_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:04:43.021 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(500) NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Categories_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:04:43.028 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrderNumber] nvarchar(50) NOT NULL,
+    [TotalPrice] decimal(18,2) NOT NULL DEFAULT 0.0,
+    [Status] int NOT NULL DEFAULT 1,
+    [UserId] uniqueidentifier NOT NULL,
+    [OrderDate] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [Notes] nvarchar(500) NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Order_TotalPrice] CHECK ([TotalPrice] >= 0),
+    CONSTRAINT [FK_Orders_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:04:43.058 +00:00 [ERR] Failed executing DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [SKU] nvarchar(50) NOT NULL,
+    [Name] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL DEFAULT 0,
+    [Status] int NOT NULL DEFAULT 1,
+    [CategoryId] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [RowVersion] rowversion NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Product_Price] CHECK ([Price] > 0),
+    CONSTRAINT [CK_Product_Quantity] CHECK ([Quantity] >= 0),
+    CONSTRAINT [FK_Products_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Products_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:07:26.119 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:07:26.144 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:07:26.429 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:07:26.446 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:07:26.448 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:07:26.449 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:07:26.466 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 09:07:26.476 +00:00 [INF] Applying migration '20251213085004_InitialCreate'.
+2025-12-13 09:07:26.538 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ApplicationUsers] (
+    [Id] uniqueidentifier NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [Username] nvarchar(100) NOT NULL,
+    [FullName] nvarchar(200) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(20) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [LastLoginAt] datetime2 NULL,
+    [IsActive] bit NOT NULL DEFAULT CAST(1 AS bit),
+    CONSTRAINT [PK_ApplicationUsers] PRIMARY KEY ([Id])
+);
+2025-12-13 09:07:26.542 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Carts] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [LastModifiedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Carts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Carts_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:07:26.546 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(500) NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Categories_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:07:26.553 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrderNumber] nvarchar(50) NOT NULL,
+    [TotalPrice] decimal(18,2) NOT NULL DEFAULT 0.0,
+    [Status] int NOT NULL DEFAULT 1,
+    [UserId] uniqueidentifier NOT NULL,
+    [OrderDate] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [Notes] nvarchar(500) NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Order_TotalPrice] CHECK ([TotalPrice] >= 0),
+    CONSTRAINT [FK_Orders_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:07:26.572 +00:00 [ERR] Failed executing DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [SKU] nvarchar(50) NOT NULL,
+    [Name] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL DEFAULT 0,
+    [Status] int NOT NULL DEFAULT 1,
+    [CategoryId] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [RowVersion] rowversion NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Product_Price] CHECK ([Price] > 0),
+    CONSTRAINT [CK_Product_Quantity] CHECK ([Quantity] >= 0),
+    CONSTRAINT [FK_Products_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Products_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:56:20.269 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:56:20.320 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:56:20.912 +00:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:56:20.945 +00:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:56:20.947 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:56:20.948 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:56:20.976 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 09:56:20.991 +00:00 [INF] Applying migration '20251213085004_InitialCreate'.
+2025-12-13 09:56:21.078 +00:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ApplicationUsers] (
+    [Id] uniqueidentifier NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [Username] nvarchar(100) NOT NULL,
+    [FullName] nvarchar(200) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(20) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [LastLoginAt] datetime2 NULL,
+    [IsActive] bit NOT NULL DEFAULT CAST(1 AS bit),
+    CONSTRAINT [PK_ApplicationUsers] PRIMARY KEY ([Id])
+);
+2025-12-13 09:56:21.085 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Carts] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [LastModifiedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Carts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Carts_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:56:21.089 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(500) NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Categories_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:56:21.097 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrderNumber] nvarchar(50) NOT NULL,
+    [TotalPrice] decimal(18,2) NOT NULL DEFAULT 0.0,
+    [Status] int NOT NULL DEFAULT 1,
+    [UserId] uniqueidentifier NOT NULL,
+    [OrderDate] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [Notes] nvarchar(500) NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Order_TotalPrice] CHECK ([TotalPrice] >= 0),
+    CONSTRAINT [FK_Orders_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:56:21.120 +00:00 [ERR] Failed executing DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [SKU] nvarchar(50) NOT NULL,
+    [Name] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL DEFAULT 0,
+    [Status] int NOT NULL DEFAULT 1,
+    [CategoryId] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [RowVersion] rowversion NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Product_Price] CHECK ([Price] > 0),
+    CONSTRAINT [CK_Product_Quantity] CHECK ([Quantity] >= 0),
+    CONSTRAINT [FK_Products_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Products_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:57:04.615 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:04.642 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:04.751 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:04.751 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:05.605 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:57:05.625 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:57:05.638 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 09:57:22.782 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:22.806 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:23.162 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:57:23.179 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:57:23.181 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:57:23.181 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:57:23.193 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 09:57:23.200 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 09:57:42.464 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:42.602 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:44.284 +00:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:57:44.405 +00:00 [INF] Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:57:44.438 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:57:44.453 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:57:44.512 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 09:57:44.565 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 09:57:45.122 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 09:57:45.872 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 09:57:45.879 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 09:57:46.136 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 09:57:46.142 +00:00 [INF] Hosting environment: Development
+2025-12-13 09:57:46.147 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 09:57:47.844 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:57:51.849 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 4021.9889ms
+2025-12-13 09:57:51.878 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:58:30.957 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:58:31.006 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 58.9815ms
+2025-12-13 09:58:31.022 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:58:35.244 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:58:35.265 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 22.2654ms
+2025-12-13 09:58:35.279 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:58:39.299 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:58:39.342 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 48.0043ms
+2025-12-13 09:58:39.353 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:58:54.285 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:58:54.300 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 16.2729ms
+2025-12-13 09:58:54.309 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:58:57.679 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:58:57.701 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 21.868ms
+2025-12-13 09:58:57.717 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:59:09.529 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:59:09.648 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:59:11.087 +00:00 [INF] Executed DbCommand (118ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:59:11.204 +00:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:59:11.235 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:59:11.251 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:59:11.308 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 09:59:11.375 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 09:59:11.723 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 09:59:12.398 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 09:59:12.404 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 09:59:12.674 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 09:59:12.679 +00:00 [INF] Hosting environment: Development
+2025-12-13 09:59:12.682 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 09:59:14.083 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:59:14.640 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 568.8056ms
+2025-12-13 09:59:14.667 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:59:17.873 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:59:17.902 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 29.1284ms
+2025-12-13 09:59:17.919 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:59:22.961 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:59:22.983 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 22.0445ms
+2025-12-13 09:59:22.992 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:59:26.209 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:59:26.225 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 16.3035ms
+2025-12-13 09:59:26.235 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 10:07:15.754 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 10:07:15.882 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 10:07:17.396 +00:00 [INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 10:07:17.557 +00:00 [INF] Executed DbCommand (81ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 10:07:17.590 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 10:07:17.602 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 10:07:17.648 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 10:07:17.693 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 10:07:18.013 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 10:07:18.489 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 10:07:18.493 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 10:07:18.715 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 10:07:18.718 +00:00 [INF] Hosting environment: Development
+2025-12-13 10:07:18.721 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 10:07:19.563 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 10:07:20.088 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 540.1726ms
+2025-12-13 10:07:20.105 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 10:10:34.175 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 10:10:34.307 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 10:10:35.638 +00:00 [INF] Executed DbCommand (100ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 10:10:35.720 +00:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 10:10:35.737 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 10:10:35.747 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 10:10:35.791 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 10:10:35.853 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 10:10:36.162 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 10:10:36.660 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 10:10:36.663 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 10:10:36.946 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 10:10:36.950 +00:00 [INF] Hosting environment: Development
+2025-12-13 10:10:36.953 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 10:10:37.505 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 10:10:38.063 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 570.8447ms
+2025-12-13 10:10:38.079 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 10:13:28.087 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 10:13:28.219 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 10:13:29.460 +00:00 [INF] Executed DbCommand (97ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 10:13:29.623 +00:00 [INF] Executed DbCommand (75ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 10:13:29.651 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 10:13:29.663 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 10:13:29.725 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 10:13:29.782 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 10:13:30.100 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 10:13:30.656 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 10:13:30.659 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 10:13:30.940 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 10:13:30.943 +00:00 [INF] Hosting environment: Development
+2025-12-13 10:13:30.946 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 10:13:31.942 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 10:13:32.378 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 447.9325ms
+2025-12-13 10:13:32.411 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404

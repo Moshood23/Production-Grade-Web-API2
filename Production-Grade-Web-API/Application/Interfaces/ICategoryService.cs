@@ -1,4 +1,5 @@
-﻿using Production.Grade.WebApi.Application.DTOs.Category;
+﻿using AutoMapper;
+using Production.Grade.WebApi.Application.DTOs.Category;
 using Production.Grade.WebApi.Application.DTOs;
 
 namespace Production.Grade.WebApi.Application.Interfaces

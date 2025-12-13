@@ -1,4 +1,5 @@
-﻿namespace Production.Grade.WebApi.Application.Interfaces
+﻿using AutoMapper;
+namespace Production.Grade.WebApi.Application.Interfaces
 {
     public interface ISkuGenerationService
     {

@@ -1,5 +1,5 @@
 ﻿namespace Production.Grade.WebApi.Application.Interfaces;
-
+using AutoMapper;
 using Production.Grade.WebApi.Application.DTOs;
 using Production.Grade.WebApi.Application.Validators;
 using Production_Grade_Web_API.Application.DTOs;

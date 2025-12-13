@@ -1,4 +1,5 @@
 using AutoMapper;
+using Production.Grade.WebApi.Application.Mappings;
 using System.Text;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
@@ -65,6 +66,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+var mapperConfig = new MapperConfiguration(cfg => cfg.AddProfile<MappingProfile>());
+builder.Services.AddSingleton(mapperConfig.CreateMapper());
+
 builder.Services.AddValidatorsFromAssemblyContaining<RegisterDtoValidator>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
@@ -127,7 +132,7 @@ app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 
 app.UseAuthentication();
 app.UseAuthorization();
- 
+
 app.MapControllers();
 
 try

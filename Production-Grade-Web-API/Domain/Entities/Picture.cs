@@ -6,7 +6,7 @@ public class Picture : BaseEntity
     public string Url { get; set; } = string.Empty;
     public string AltText { get; set; } = string.Empty;
     public int DisplayOrder { get; set; }
-    public int OrderID { get; set; }
+    public DateTime AddedAt { get; set; } = DateTime.UtcNow;
     public Product? Product { get; set; }
-    public object? AddedAt { get; internal set; }
+   
 }

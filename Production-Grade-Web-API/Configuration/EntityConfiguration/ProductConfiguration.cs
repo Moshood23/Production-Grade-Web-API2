@@ -70,26 +70,26 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         builder.HasOne(p => p.Category)
             .WithMany(c => c.Products)
             .HasForeignKey(p => p.CategoryId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasOne(p => p.User)
             .WithMany(u => u.Products)
             .HasForeignKey(p => p.UserId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasMany(p => p.Pictures)
             .WithOne(pic => pic.Product)
             .HasForeignKey(pic => pic.ProductId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasMany(p => p.OrderItems)
             .WithOne(oi => oi.Product)
             .HasForeignKey(oi => oi.ProductId)
-            .OnDelete(DeleteBehavior.Cascade);
+           .OnDelete(DeleteBehavior.NoAction);
 
         builder.HasMany(p => p.CartItems)
             .WithOne(ci => ci.Product)
             .HasForeignKey(ci => ci.ProductId)
-            .OnDelete(DeleteBehavior.Cascade);
+           .OnDelete(DeleteBehavior.NoAction);
     }
 }
