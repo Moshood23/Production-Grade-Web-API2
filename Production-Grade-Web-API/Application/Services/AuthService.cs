@@ -62,7 +62,6 @@ public class AuthService : IAuthService
             ExpiresAt = DateTime.UtcNow.AddHours(1)
         };
     }
-
     public async Task<AuthResponseDto> LoginAsync(LoginDto dto)
     {
         var users = await _unitOfWork.Users.GetAllAsync();
