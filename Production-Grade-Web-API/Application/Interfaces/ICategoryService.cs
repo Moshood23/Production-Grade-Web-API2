@@ -1,7 +1,8 @@
-﻿using Production.Grade.WebApi.Application.Mappings;
-using Production.Grade.WebApi.Application.Services;
+﻿using AutoMapper;
+using Production.Grade.WebApi.Application.DTOs.Category;
+using Production.Grade.WebApi.Application.DTOs;
 
-namespace Production_Grade_Web_API.Application.Interfaces
+namespace Production.Grade.WebApi.Application.Interfaces
 {
     public interface ICategoryService
     {
@@ -10,6 +11,7 @@ namespace Production_Grade_Web_API.Application.Interfaces
         Task<IEnumerable<CategoryResponseDto>> GetAllAsync(string userId);
         Task<CategoryResponseDto> UpdateAsync(Guid id, string userId, UpdateCategoryDto dto);
         Task DeleteAsync(Guid id, string userId);
+        
     }
 
 }

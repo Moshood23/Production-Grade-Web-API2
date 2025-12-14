@@ -1,100 +1,118 @@
 ﻿namespace Production.Grade.WebApi.Application.Mappings;
 
-using System;
 using AutoMapper;
-using Production.Grade.WebApi.Application.Services;
+using Production.Grade.WebApi.Application.DTO;
+using Production.Grade.WebApi.Application.DTOs;
 using Production.Grade.WebApi.Domain.Entities;
-using Production_Grade_Web_API.Application.DTO;
-using Production_Grade_Web_API.Application.Validators;
 
 public class MappingProfile : Profile
 {
     public MappingProfile()
     {
-        CreateCategoryMaps();
-        CreateProductMaps();
-        CreatePictureMaps();
-        CreateOrderMaps();
-        CreateCartMaps();
-        CreateUserMaps();
-    }
-
-    private void CreateCategoryMaps()
-    {
+        // ============================
+        // CATEGORY MAPPINGS
+        // ============================
         CreateMap<CreateCategoryDto, Category>();
 
-        CreateMap<UpdateCategoryDto, Category>()
-            .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null));
-
         CreateMap<Category, CategoryResponseDto>()
-            .ForMember(d => d.ProductCount, m => m.MapFrom(s => s.Products.Count));
-    }
+            .ForMember(
+                dest => dest.ProductCount,
+                opt => opt.MapFrom(src => src.Products.Count)
+            );
 
-    private void CreateMap<T1, T2>()
-    {
-        throw new NotImplementedException();
-    }
 
-    private void CreateProductMaps()
-    {
+        // ============================
+        // PRODUCT MAPPINGS
+        // ============================
         CreateMap<CreateProductDto, Product>();
 
-        CreateMap<UpdateProductDto, Product>()
-            .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null));
-
         CreateMap<Product, ProductResponseDto>()
-            .ForMember(d => d.CategoryName, m => m.MapFrom(s => s.Category != null ? s.Category.Name : string.Empty))
-            .ForMember(d => d.Pictures, m => m.MapFrom(s => s.Pictures));
+            .ForMember(
+                dest => dest.CategoryName,
+                opt => opt.MapFrom(src => src.Category == null ? "" : src.Category.Name)
+            )
+            .ForMember(
+                dest => dest.Pictures,
+                opt => opt.MapFrom(src => src.Pictures)
+            );
 
         CreateMap<Product, ProductListDto>()
-            .ForMember(d => d.CategoryName, m => m.MapFrom(s => s.Category != null ? s.Category.Name : string.Empty))
-            .ForMember(d => d.ThumbnailUrl, m => m.MapFrom(s =>
-                s.Pictures.OrderBy(p => p.DisplayOrder).FirstOrDefault() != null
-                ? s.Pictures.OrderBy(p => p.DisplayOrder).First().Url
-                : null));
-    }
+            .ForMember(
+                dest => dest.CategoryName,
+                opt => opt.MapFrom(src => src.Category == null ? "" : src.Category.Name)
+            )
+            .ForMember(
+                dest => dest.ThumbnailUrl,
+                opt => opt.MapFrom(src => GetFirstPictureUrl(src.Pictures))
+            );
 
-    private void CreatePictureMaps()
-    {
+
+        // ============================
+        // PICTURE MAPPINGS
+        // ============================
         CreateMap<Picture, PictureResponseDto>();
-    }
 
-    private void CreateOrderMaps()
-    {
+
+        // ============================
+        // ORDER MAPPINGS
+        // ============================
         CreateMap<CreateOrderDto, Order>();
-
         CreateMap<CreateOrderItemDto, OrderItem>();
 
         CreateMap<OrderItem, OrderItemResponseDto>()
-            .ForMember(d => d.ProductName, m => m.MapFrom(s => s.Product != null ? s.Product.Name : string.Empty))
-            .ForMember(d => d.ProductSku, m => m.MapFrom(s => s.Product != null ? s.Product.SKU : string.Empty));
+            .ForMember(
+                dest => dest.ProductName,
+                opt => opt.MapFrom(src => src.Product == null ? "" : src.Product.Name)
+            )
+            .ForMember(
+                dest => dest.ProductSku,
+                opt => opt.MapFrom(src => src.Product == null ? "" : src.Product.SKU)
+            );
 
         CreateMap<Order, OrderResponseDto>()
-            .ForMember(d => d.OrderItems, m => m.MapFrom(s => s.OrderItems));
+            .ForMember(
+                dest => dest.OrderItems,
+                opt => opt.MapFrom(src => src.OrderItems)
+            );
 
         CreateMap<Order, OrderListDto>()
-            .ForMember(d => d.ItemCount, m => m.MapFrom(s => s.OrderItems.Sum(oi => oi.Quantity)));
-    }
+            .ForMember(
+                dest => dest.ItemCount,
+                opt => opt.MapFrom(src => src.OrderItems.Sum(oi => oi.Quantity))
+            );
 
-    private void CreateCartMaps()
-    {
+
+        // ============================
+        // CART MAPPINGS
+        // ============================
         CreateMap<CreateCartItemDto, CartItem>();
-
         CreateMap<CartItem, CartItemResponseDto>()
-            .ForMember(d => d.ProductName, m => m.MapFrom(s => s.Product != null ? s.Product.Name : string.Empty))
-            .ForMember(d => d.ProductSku, m => m.MapFrom(s => s.Product != null ? s.Product.SKU : string.Empty));
+            .ForMember(
+                dest => dest.ProductName,
+                opt => opt.MapFrom(src => src.Product == null ? "" : src.Product.Name)
+            )
+            .ForMember(
+                dest => dest.ProductSku,
+                opt => opt.MapFrom(src => src.Product == null ? "" : src.Product.SKU)
+            );
 
         CreateMap<Cart, CartResponseDto>()
-            .ForMember(d => d.Items, m => m.MapFrom(s => s.CartItems))
-            .ForMember(d => d.TotalPrice, m => m.MapFrom(s => s.CalculatedTotalPrice))
-            .ForMember(d => d.TotalItemCount, m => m.MapFrom(s => s.TotalItemCount));
+            .ForMember(dest => dest.Items, opt => opt.MapFrom(src => src.CartItems))
+            .ForMember(dest => dest.TotalPrice, opt => opt.MapFrom(src => src.CalculatedTotalPrice))
+            .ForMember(dest => dest.TotalItemCount, opt => opt.MapFrom(src => src.TotalItemCount));
+
+
+        // ============================
+        // USER MAPPINGS
+        // ============================
+        CreateMap<ApplicationUser, UserProfileDto>();
     }
 
-    private void CreateUserMaps()
+    private static string? GetFirstPictureUrl(ICollection<Picture>? pictures)
     {
-        CreateMap<ApplicationUser, UserProfileDto>();
+        if (pictures == null || pictures.Count == 0)
+            return null;
 
-        CreateMap<UpdateUserProfileDto, ApplicationUser>()
-            .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null));
+        return pictures.OrderBy(p => p.DisplayOrder).FirstOrDefault()?.Url;
     }
 }

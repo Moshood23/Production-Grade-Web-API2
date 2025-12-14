@@ -1,19 +1,18 @@
-﻿namespace Production.Grade.WebApi.Application.Services;
-
+﻿
 using AutoMapper;
 using Production.Grade.WebApi.Application.Interfaces;
 using Production.Grade.WebApi.Domain.Entities;
 using Production.Grade.WebApi.Domain.Interfaces;
-using Production_Grade_Web_API.Application.DTO;
-using Production_Grade_Web_API.Application.Interfaces;
+using Production.Grade.WebApi.Application.DTO;
 
+namespace Production.Grade.WebApi.Application.Services;
 public class ProductService : IProductService
 {
     private readonly IUnitOfWork _unitOfWork;
-    private readonly IMapper _mapper;
+    private readonly AutoMapper.IMapper _mapper;
     private readonly ISkuGenerationService _skuService;
 
-    public ProductService(IUnitOfWork unitOfWork, IMapper mapper, ISkuGenerationService skuService)
+    public ProductService(IUnitOfWork unitOfWork, AutoMapper.IMapper mapper, ISkuGenerationService skuService)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;

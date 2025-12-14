@@ -1,0 +1,2 @@
+wwwroot\images\products.cs
+wwwroot\images\temp.cs

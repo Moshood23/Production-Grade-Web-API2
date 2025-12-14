@@ -1,11 +1,12 @@
-﻿namespace Production_Grade_Web_API.Application.DTOs
+﻿namespace Production.Grade.WebApi.Application.DTOs
 {
     public class RegisterDto
     {
-        public string? Username { get; internal set; }
-        public string? Password { get; internal set; }
-        public string? FullName { get; internal set; }
-        public string? Email { get; internal set; }
-        public string? PhoneNumber { get; internal set; }
+        public string Email { get; set; } = string.Empty;
+        public string Username { get; set; } = string.Empty;
+        public string FullName { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+        public string ConfirmPassword { get; set; } = string.Empty;
+        public string? PhoneNumber { get; set; }
     }
 }

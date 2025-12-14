@@ -1,4 +1,4 @@
-﻿namespace Production.Grade.WebApi.Application.Services
+﻿namespace Production.Grade.WebApi.Application.DTOs
 {
     public class CategoryResponseDto
     {
@@ -8,5 +8,6 @@
         public string? Description { get; set; }
         public int CategoryID { get; set; }
         public object Name { get; internal set; }
+        public object ProductCount { get; internal set; }
     }
 }

@@ -1,6 +1,8 @@
-﻿using Production.Grade.WebApi.Application.Validators;
+﻿using FluentValidation;
+using Production.Grade.WebApi.Application.Validators;
+using Production_Grade_Web_API.Application.Validators;
 
-namespace Production_Grade_Web_API.Application.Validators
+namespace Production.Grade.WebApi.Application.Validators
 {
     public class UpdateUserProfileDtoValidator : AbstractValidator<UpdateUserProfileDto>
     {

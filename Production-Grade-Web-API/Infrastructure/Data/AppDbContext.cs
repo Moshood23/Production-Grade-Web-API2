@@ -72,7 +72,7 @@ public class ApplicationDbContext : DbContext
                     case EntityState.Added:
                         baseEntity.CreatedAt = DateTime.UtcNow;
                         break;
-                    case EntityState.Modified:
+                    case EntityState.Modified: 
                         baseEntity.UpdatedAt = DateTime.UtcNow;
                         break;
                 }
@@ -80,11 +80,11 @@ public class ApplicationDbContext : DbContext
 
             if (entry.Entity is Cart cart)
             {
-                if (entry.State == EntityState.Modified)
+                if (entry.State == EntityState.Modified) 
                 {
                     cart.LastModifiedAt = DateTime.UtcNow;
                 }
             }
-        }
+        } 
     }
 }

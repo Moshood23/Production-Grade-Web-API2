@@ -49,6 +49,6 @@ public class PictureConfiguration : IEntityTypeConfiguration<Picture>
         builder.HasOne(p => p.Product)
             .WithMany(prod => prod.Pictures)
             .HasForeignKey(p => p.ProductId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }

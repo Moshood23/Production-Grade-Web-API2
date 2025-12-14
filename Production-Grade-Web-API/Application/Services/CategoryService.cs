@@ -1,11 +1,11 @@
 ﻿namespace Production.Grade.WebApi.Application.Services;
-
 using AutoMapper;
+using Production.Grade.WebApi.Application.DTOs.Category;
 using Production.Grade.WebApi.Application.Interfaces;
-using Production.Grade.WebApi.Application.Mappings;
 using Production.Grade.WebApi.Domain.Entities;
 using Production.Grade.WebApi.Domain.Interfaces;
-using Production_Grade_Web_API.Application.Interfaces;
+using Production.Grade.WebApi.Application.DTOs;
+using IMapper = AutoMapper.IMapper;
 
 public class CategoryService : ICategoryService
 {

@@ -5,7 +5,7 @@ public class OrderItem : BaseEntity
     public Guid ProductId { get; set; }
     public int Quantity { get; set; }
     public decimal PriceAtTime { get; set; }
-    public decimal LineTotal => Quantity * PriceAtTime;
+    public int LineTotal => (int)(Quantity * PriceAtTime);
     public Order? Order { get; set; }
     public Product? Product { get; set; }
 }
