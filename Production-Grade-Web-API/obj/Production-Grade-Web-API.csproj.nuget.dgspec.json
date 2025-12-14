@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Production-Grade-Web-API.csproj": {}
+    "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API2\\Production-Grade-Web-API\\Production-Grade-Web-API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Production-Grade-Web-API.csproj": {
+    "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API2\\Production-Grade-Web-API\\Production-Grade-Web-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Production-Grade-Web-API.csproj",
+        "projectUniqueName": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API2\\Production-Grade-Web-API\\Production-Grade-Web-API.csproj",
         "projectName": "Production-Grade-Web-API",
-        "projectPath": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Production-Grade-Web-API.csproj",
+        "projectPath": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API2\\Production-Grade-Web-API\\Production-Grade-Web-API.csproj",
         "packagesPath": "C:\\Users\\aolan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\obj\\",
+        "outputPath": "C:\\Users\\aolan\\Source\\Repos\\Production-Grade-Web-API2\\Production-Grade-Web-API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
