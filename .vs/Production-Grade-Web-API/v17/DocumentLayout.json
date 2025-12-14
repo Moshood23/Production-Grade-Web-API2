@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\domain\\entities\\picture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\domain\\entities\\picture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Migrations\\20251214084530_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Production-Grade-Web-API\\Migrations\\20251214084530_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\domain\\entities\\picture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|solutionrelative:production-grade-web-api\\domain\\entities\\picture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4F859CF-D528-41B8-8985-59CEB7031C1C}|Production-Grade-Web-API\\Production-Grade-Web-API.csproj|c:\\users\\aolan\\source\\repos\\production-grade-web-api\\production-grade-web-api\\domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -358,17 +362,17 @@
       "DocumentGroups": [
         {
           "DockedHeight": 194,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Program.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Program.cs",
               "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Program.cs",
               "RelativeToolTip": "Production-Grade-Web-API\\Program.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAHIAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-11T16:19:02.773Z",
               "IsPinned": true,
@@ -420,7 +424,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
+              "Title": "20251214084530_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Migrations\\20251214084530_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Production-Grade-Web-API\\Migrations\\20251214084530_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Migrations\\20251214084530_InitialCreate.cs",
+              "RelativeToolTip": "Production-Grade-Web-API\\Migrations\\20251214084530_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T08:45:30.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Controllers\\ProductsController.cs",
@@ -428,12 +445,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Controllers\\ProductsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T16:07:05.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T16:07:05.176Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\RegisterDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\RegisterDto.cs",
@@ -441,25 +457,24 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Application\\DTOs\\RegisterDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T13:36:50.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T13:36:50.257Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Services\\AuthService.cs",
               "ToolTip": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\AuthService.cs",
               "RelativeToolTip": "Production-Grade-Web-API\\Application\\Services\\AuthService.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAYwD8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-11T13:20:09.731Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Entities\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Entities\\ApplicationUser.cs",
@@ -467,12 +482,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Domain\\Entities\\ApplicationUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T21:29:00.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T21:29:00.551Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Picture.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Entities\\Picture.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Entities\\Picture.cs",
@@ -480,12 +494,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Domain\\Entities\\Picture.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T14:18:57.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T14:18:57.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Controllers\\WeatherForecast.cs",
@@ -493,12 +506,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Controllers\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T19:18:03.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T19:18:03.156Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Controllers\\CategoriesController.cs",
@@ -506,12 +518,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Controllers\\CategoriesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T16:06:47.412Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T16:06:47.412Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Controllers\\OrdersController.cs",
@@ -519,12 +530,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Controllers\\OrdersController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T16:07:38.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T16:07:38.396Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Controllers\\AuthController.cs",
@@ -532,12 +542,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T16:06:14.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T16:06:14.948Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Properties\\launchSettings.json",
@@ -545,12 +554,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-13T19:48:23.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T19:48:23.215Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "UpdateCartItemDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\UpdateCartItemDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\UpdateCartItemDto.cs",
@@ -558,12 +566,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Application\\DTOs\\UpdateCartItemDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T21:12:16.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T21:12:16.926Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\LoginDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\LoginDto.cs",
@@ -571,12 +578,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Application\\DTOs\\LoginDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T19:36:16.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T19:36:16.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "UpdateProductDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\UpdateProductDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\UpdateProductDto.cs",
@@ -584,12 +590,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Application\\DTOs\\UpdateProductDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T21:12:31.112Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T21:12:31.112Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "UpdateUserProfileDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\UpdateUserProfileDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\UpdateUserProfileDto.cs",
@@ -597,12 +602,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Application\\DTOs\\UpdateUserProfileDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T20:21:51.249Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T20:21:51.249Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "CartItemResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\CartItemResponseDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\CartItemResponseDto.cs",
@@ -610,12 +614,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Application\\DTOs\\CartItemResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T21:09:03.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T21:09:03.88Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "AuthResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\AuthResponseDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\AuthResponseDto.cs",
@@ -623,12 +626,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Application\\DTOs\\AuthResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T13:40:47.099Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T13:40:47.099Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "UserProfileDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\UserProfileDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\UserProfileDto.cs",
@@ -636,12 +638,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Application\\DTOs\\UserProfileDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T12:22:37.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T12:22:37.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\appsettings.json",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\appsettings.json",
@@ -649,12 +650,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-11T16:20:54.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T16:20:54.205Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "CartConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Configuration\\EntityConfiguration\\CartConfiguration.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Configuration\\EntityConfiguration\\CartConfiguration.cs",
@@ -666,7 +666,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "CartItemConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Configuration\\EntityConfiguration\\CartItemConfiguration.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Configuration\\EntityConfiguration\\CartItemConfiguration.cs",
@@ -678,7 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "OrderConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Configuration\\EntityConfiguration\\OrderConfiguration.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Configuration\\EntityConfiguration\\OrderConfiguration.cs",
@@ -686,12 +686,11 @@
               "RelativeToolTip": "Production-Grade-Web-API\\Configuration\\EntityConfiguration\\OrderConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-11T21:06:51.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-11T21:06:51.652Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "CategoryConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Configuration\\EntityConfiguration\\CategoryConfiguration.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Configuration\\EntityConfiguration\\CategoryConfiguration.cs",
@@ -703,7 +702,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "ApplicationUserConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Configuration\\EntityConfiguration\\ApplicationUserConfiguration.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Configuration\\EntityConfiguration\\ApplicationUserConfiguration.cs",
@@ -715,7 +714,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "OrderItemConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Configuration\\EntityConfiguration\\OrderItemConfiguration.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Configuration\\EntityConfiguration\\OrderItemConfiguration.cs",
@@ -727,7 +726,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "ProductConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Configuration\\EntityConfiguration\\ProductConfiguration.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Configuration\\EntityConfiguration\\ProductConfiguration.cs",
@@ -739,7 +738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "PictureConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Configuration\\EntityConfiguration\\PictureConfiguration.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Configuration\\EntityConfiguration\\PictureConfiguration.cs",
@@ -751,7 +750,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "ICartService.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\ICartService.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Interfaces\\ICartService.cs",
@@ -763,7 +762,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "IProductService.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\IProductService.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Interfaces\\IProductService.cs",
@@ -775,7 +774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "CartService.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\CartService.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Services\\CartService.cs",
@@ -787,7 +786,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "ISkuGenerationService.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\ISkuGenerationService.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Interfaces\\ISkuGenerationService.cs",
@@ -799,7 +798,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "ICategoryService.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\ICategoryService.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Interfaces\\ICategoryService.cs",
@@ -811,7 +810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "IMapper.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\IMapper.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Interfaces\\IMapper.cs",
@@ -823,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\IOrderService.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Interfaces\\IOrderService.cs",
@@ -835,7 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "CartsController.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Controllers\\CartsController.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Controllers\\CartsController.cs",
@@ -847,7 +846,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Interfaces\\IAuthService.cs",
@@ -859,7 +858,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Infrastructure\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Infrastructure\\Data\\AppDbContext.cs",
@@ -871,7 +870,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\CategoryService.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Services\\CategoryService.cs",
@@ -883,7 +882,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Services\\ProductService.cs",
@@ -895,7 +894,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Mappings\\MappingProfile.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Mappings\\MappingProfile.cs",
@@ -907,7 +906,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Services\\OrderService.cs",
@@ -919,7 +918,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "UpdateUserProfileDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Validators\\UpdateUserProfileDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Validators\\UpdateUserProfileDto.cs",
@@ -931,7 +930,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "Production-Grade-Web-API.csproj",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Production-Grade-Web-API.csproj",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Production-Grade-Web-API.csproj",
@@ -943,7 +942,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "CartItem.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Entities\\CartItem.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Entities\\CartItem.cs",
@@ -955,7 +954,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "ApiResponse.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Common\\ApiResponse.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Common\\ApiResponse.cs",
@@ -967,7 +966,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "ProductStatus.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Enums\\ProductStatus.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Enums\\ProductStatus.cs",
@@ -979,7 +978,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "OrderStatus.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Enums\\OrderStatus.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Enums\\OrderStatus.cs",
@@ -991,7 +990,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Infrastructure\\Data\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Infrastructure\\Data\\UnitOfWork.cs",
@@ -1003,7 +1002,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "UpdateCategoryDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\UpdateCategoryDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\UpdateCategoryDto.cs",
@@ -1015,7 +1014,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "ProductResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\ProductResponseDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\ProductResponseDto.cs",
@@ -1027,7 +1026,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "ProductListDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\ProductListDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\ProductListDto.cs",
@@ -1039,7 +1038,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "PictureResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\PictureResponseDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\PictureResponseDto.cs",
@@ -1051,7 +1050,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "OrderResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\OrderResponseDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\OrderResponseDto.cs",
@@ -1063,7 +1062,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "OrderListDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\OrderListDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\OrderListDto.cs",
@@ -1075,7 +1074,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "OrderItemResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\OrderItemResponseDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\OrderItemResponseDto.cs",
@@ -1087,7 +1086,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "CreateProductDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\CreateProductDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\CreateProductDto.cs",
@@ -1099,7 +1098,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "CreateOrderItemDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\CreateOrderItemDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\CreateOrderItemDto.cs",
@@ -1111,7 +1110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "CreateOrderDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\CreateOrderDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\CreateOrderDto.cs",
@@ -1123,7 +1122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "CreateCategoryDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\CreateCategoryDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\CreateCategoryDto.cs",
@@ -1135,7 +1134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "CreateCartItemDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\CreateCartItemDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\CreateCartItemDto.cs",
@@ -1147,7 +1146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "CategoryResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\CategoryResponseDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\CategoryResponseDto.cs",
@@ -1159,7 +1158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "CartResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\DTOs\\CartResponseDto.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\DTOs\\CartResponseDto.cs",
@@ -1171,7 +1170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Entities\\OrderItem.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Entities\\OrderItem.cs",
@@ -1183,7 +1182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Entities\\Product.cs",
@@ -1195,7 +1194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Entities\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Entities\\BaseEntity.cs",
@@ -1207,7 +1206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "Cart.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Entities\\Cart.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Entities\\Cart.cs",
@@ -1219,7 +1218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Entities\\Category.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Entities\\Category.cs",
@@ -1231,7 +1230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Entities\\Order.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Entities\\Order.cs",
@@ -1243,7 +1242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "CreateOrderDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Validators\\CreateOrderDtoValidator.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Validators\\CreateOrderDtoValidator.cs",
@@ -1255,7 +1254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "GlobalExceptionHandlerMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
@@ -1267,7 +1266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "SkuGenerationService.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Infrastructure\\Services\\SkuGenerationService.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Infrastructure\\Services\\SkuGenerationService.cs",
@@ -1279,7 +1278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "OrderNumberGenerationService.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Infrastructure\\Services\\OrderNumberGenerationService.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Infrastructure\\Services\\OrderNumberGenerationService.cs",
@@ -1291,7 +1290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "JwtTokenService.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Infrastructure\\Services\\JwtTokenService.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Infrastructure\\Services\\JwtTokenService.cs",
@@ -1303,7 +1302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "BaseRepository.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Infrastructure\\Data\\Repositories\\BaseRepository.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Infrastructure\\Data\\Repositories\\BaseRepository.cs",
@@ -1315,7 +1314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Interfaces\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Interfaces\\IUnitOfWork.cs",
@@ -1327,7 +1326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Domain\\Interfaces\\IRepository.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Domain\\Interfaces\\IRepository.cs",
@@ -1339,7 +1338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "UpdateCategoryDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Validators\\UpdateCategoryDtoValidator.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Validators\\UpdateCategoryDtoValidator.cs",
@@ -1351,7 +1350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "UpdateCartItemDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Validators\\UpdateCartItemDtoValidator.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Validators\\UpdateCartItemDtoValidator.cs",
@@ -1363,7 +1362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 80,
               "Title": "RegisterDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Validators\\RegisterDtoValidator.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Validators\\RegisterDtoValidator.cs",
@@ -1375,7 +1374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 81,
               "Title": "LoginDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Validators\\LoginDtoValidator.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Validators\\LoginDtoValidator.cs",
@@ -1387,7 +1386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "CreateProductDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Validators\\CreateProductDtoValidator.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Validators\\CreateProductDtoValidator.cs",
@@ -1399,7 +1398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "UpdateProductDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Validators\\UpdateProductDtoValidator.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Validators\\UpdateProductDtoValidator.cs",
@@ -1411,7 +1410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "CreateOrderItemDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Validators\\CreateOrderItemDtoValidator.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Validators\\CreateOrderItemDtoValidator.cs",
@@ -1423,7 +1422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 84,
               "Title": "CreateCategoryDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Validators\\CreateCategoryDtoValidator.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Validators\\CreateCategoryDtoValidator.cs",
@@ -1435,7 +1434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 85,
               "Title": "CreateCartItemDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Application\\Validators\\CreateCartItemDtoValidator.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\Application\\Validators\\CreateCartItemDtoValidator.cs",
@@ -1447,7 +1446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 86,
               "Title": "temp.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\wwwroot\\images\\temp.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\wwwroot\\images\\temp.cs",
@@ -1459,7 +1458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 87,
               "Title": "products.cs",
               "DocumentMoniker": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\wwwroot\\images\\products.cs",
               "RelativeDocumentMoniker": "Production-Grade-Web-API\\wwwroot\\images\\products.cs",
