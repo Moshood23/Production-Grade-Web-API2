@@ -3,19 +3,18 @@
 using AutoMapper;
 using BCrypt.Net;
 using Production.Grade.WebApi.Application.Interfaces;
-using Production.Grade.WebApi.Application.Mappings;
 using Production.Grade.WebApi.Domain.Entities;
 using Production.Grade.WebApi.Domain.Interfaces;
 using Production.Grade.WebApi.Infrastructure.Services;
+using Production.Grade.WebApi.Application.DTOs;
+using Production.Grade.WebApi.Application.Validators;
 using Production_Grade_Web_API.Application.DTOs;
-using Production_Grade_Web_API.Application.Validators;
 
 public class AuthService : IAuthService
 {
     private readonly IUnitOfWork _unitOfWork;
-    private readonly IMapper _mapper;
+    private readonly AutoMapper.IMapper _mapper;
     private readonly IJwtTokenService _jwtTokenService;
-
     public AuthService(IUnitOfWork unitOfWork, IMapper mapper, IJwtTokenService jwtTokenService)
     {
         _unitOfWork = unitOfWork;
@@ -63,7 +62,6 @@ public class AuthService : IAuthService
             ExpiresAt = DateTime.UtcNow.AddHours(1)
         };
     }
-
     public async Task<AuthResponseDto> LoginAsync(LoginDto dto)
     {
         var users = await _unitOfWork.Users.GetAllAsync();

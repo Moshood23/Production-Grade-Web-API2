@@ -1,22 +1,21 @@
-﻿namespace Production.Grade.WebApi.Application.Services;
-
+﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Production.Grade.WebApi.Application.Interfaces;
 using Production.Grade.WebApi.Domain.Entities;
 using Production.Grade.WebApi.Domain.Enums;
 using Production.Grade.WebApi.Domain.Interfaces;
 using Production.Grade.WebApi.Infrastructure.Data;
-using Production_Grade_Web_API.Application.DTO;
-using Production_Grade_Web_API.Application.Interfaces;
+using Production.Grade.WebApi.Application.DTO;
 
+namespace Production.Grade.WebApi.Application.Services;
 public class OrderService : IOrderService
 {
+    private readonly IMapper _mapper;
     private readonly IUnitOfWork _unitOfWork;
     private readonly ApplicationDbContext _context;
-    private readonly IMapper _mapper;
     private readonly IOrderNumberGenerationService _orderNumberService;
 
-    public OrderService(IUnitOfWork unitOfWork, ApplicationDbContext context, IMapper mapper, IOrderNumberGenerationService orderNumberService)
+    public OrderService(IUnitOfWork unitOfWork, ApplicationDbContext context, AutoMapper.IMapper mapper, IOrderNumberGenerationService orderNumberService)
     {
         _unitOfWork = unitOfWork;
         _context = context;

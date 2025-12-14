@@ -1,0 +1,1417 @@
+2025-12-13 08:50:01.067 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:01.141 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:01.394 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:01.394 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:28.476 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:28.517 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:30.642 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:30.642 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:50:31.334 +00:00 [INF] Executed DbCommand (629ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [ProductionGradeWebApiDb];
+2025-12-13 08:50:31.687 +00:00 [INF] Executed DbCommand (348ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [ProductionGradeWebApiDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2025-12-13 08:50:31.715 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 08:50:31.823 +00:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2025-12-13 08:50:31.827 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 08:50:31.855 +00:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 08:50:31.928 +00:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 08:50:31.946 +00:00 [INF] Applying migration '20251213085004_InitialCreate'.
+2025-12-13 08:50:32.061 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ApplicationUsers] (
+    [Id] uniqueidentifier NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [Username] nvarchar(100) NOT NULL,
+    [FullName] nvarchar(200) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(20) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [LastLoginAt] datetime2 NULL,
+    [IsActive] bit NOT NULL DEFAULT CAST(1 AS bit),
+    CONSTRAINT [PK_ApplicationUsers] PRIMARY KEY ([Id])
+);
+2025-12-13 08:50:32.077 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Carts] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [LastModifiedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Carts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Carts_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 08:50:32.094 +00:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(500) NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Categories_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 08:50:32.128 +00:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrderNumber] nvarchar(50) NOT NULL,
+    [TotalPrice] decimal(18,2) NOT NULL DEFAULT 0.0,
+    [Status] int NOT NULL DEFAULT 1,
+    [UserId] uniqueidentifier NOT NULL,
+    [OrderDate] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [Notes] nvarchar(500) NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Order_TotalPrice] CHECK ([TotalPrice] >= 0),
+    CONSTRAINT [FK_Orders_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 08:50:32.190 +00:00 [ERR] Failed executing DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [SKU] nvarchar(50) NOT NULL,
+    [Name] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL DEFAULT 0,
+    [Status] int NOT NULL DEFAULT 1,
+    [CategoryId] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [RowVersion] rowversion NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Product_Price] CHECK ([Price] > 0),
+    CONSTRAINT [CK_Product_Quantity] CHECK ([Quantity] >= 0),
+    CONSTRAINT [FK_Products_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Products_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 08:56:49.808 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:56:49.856 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:56:50.061 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:56:50.061 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:57:59.034 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:57:59.084 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 08:57:59.755 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 08:57:59.796 +00:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 08:57:59.799 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 08:57:59.800 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 08:57:59.846 +00:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 08:57:59.865 +00:00 [INF] Applying migration '20251213085004_InitialCreate'.
+2025-12-13 08:57:59.974 +00:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ApplicationUsers] (
+    [Id] uniqueidentifier NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [Username] nvarchar(100) NOT NULL,
+    [FullName] nvarchar(200) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(20) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [LastLoginAt] datetime2 NULL,
+    [IsActive] bit NOT NULL DEFAULT CAST(1 AS bit),
+    CONSTRAINT [PK_ApplicationUsers] PRIMARY KEY ([Id])
+);
+2025-12-13 08:57:59.981 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Carts] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [LastModifiedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Carts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Carts_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 08:57:59.987 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(500) NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Categories_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 08:57:59.999 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrderNumber] nvarchar(50) NOT NULL,
+    [TotalPrice] decimal(18,2) NOT NULL DEFAULT 0.0,
+    [Status] int NOT NULL DEFAULT 1,
+    [UserId] uniqueidentifier NOT NULL,
+    [OrderDate] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [Notes] nvarchar(500) NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Order_TotalPrice] CHECK ([TotalPrice] >= 0),
+    CONSTRAINT [FK_Orders_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 08:58:00.044 +00:00 [ERR] Failed executing DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [SKU] nvarchar(50) NOT NULL,
+    [Name] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL DEFAULT 0,
+    [Status] int NOT NULL DEFAULT 1,
+    [CategoryId] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [RowVersion] rowversion NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Product_Price] CHECK ([Price] > 0),
+    CONSTRAINT [CK_Product_Quantity] CHECK ([Quantity] >= 0),
+    CONSTRAINT [FK_Products_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Products_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:04:42.430 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:04:42.461 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:04:42.784 +00:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:04:42.817 +00:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:04:42.821 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:04:42.823 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:04:42.868 +00:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 09:04:42.882 +00:00 [INF] Applying migration '20251213085004_InitialCreate'.
+2025-12-13 09:04:43.011 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ApplicationUsers] (
+    [Id] uniqueidentifier NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [Username] nvarchar(100) NOT NULL,
+    [FullName] nvarchar(200) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(20) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [LastLoginAt] datetime2 NULL,
+    [IsActive] bit NOT NULL DEFAULT CAST(1 AS bit),
+    CONSTRAINT [PK_ApplicationUsers] PRIMARY KEY ([Id])
+);
+2025-12-13 09:04:43.017 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Carts] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [LastModifiedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Carts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Carts_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:04:43.021 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(500) NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Categories_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:04:43.028 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrderNumber] nvarchar(50) NOT NULL,
+    [TotalPrice] decimal(18,2) NOT NULL DEFAULT 0.0,
+    [Status] int NOT NULL DEFAULT 1,
+    [UserId] uniqueidentifier NOT NULL,
+    [OrderDate] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [Notes] nvarchar(500) NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Order_TotalPrice] CHECK ([TotalPrice] >= 0),
+    CONSTRAINT [FK_Orders_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:04:43.058 +00:00 [ERR] Failed executing DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [SKU] nvarchar(50) NOT NULL,
+    [Name] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL DEFAULT 0,
+    [Status] int NOT NULL DEFAULT 1,
+    [CategoryId] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [RowVersion] rowversion NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Product_Price] CHECK ([Price] > 0),
+    CONSTRAINT [CK_Product_Quantity] CHECK ([Quantity] >= 0),
+    CONSTRAINT [FK_Products_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Products_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:07:26.119 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:07:26.144 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:07:26.429 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:07:26.446 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:07:26.448 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:07:26.449 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:07:26.466 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 09:07:26.476 +00:00 [INF] Applying migration '20251213085004_InitialCreate'.
+2025-12-13 09:07:26.538 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ApplicationUsers] (
+    [Id] uniqueidentifier NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [Username] nvarchar(100) NOT NULL,
+    [FullName] nvarchar(200) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(20) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [LastLoginAt] datetime2 NULL,
+    [IsActive] bit NOT NULL DEFAULT CAST(1 AS bit),
+    CONSTRAINT [PK_ApplicationUsers] PRIMARY KEY ([Id])
+);
+2025-12-13 09:07:26.542 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Carts] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [LastModifiedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Carts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Carts_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:07:26.546 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(500) NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Categories_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:07:26.553 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrderNumber] nvarchar(50) NOT NULL,
+    [TotalPrice] decimal(18,2) NOT NULL DEFAULT 0.0,
+    [Status] int NOT NULL DEFAULT 1,
+    [UserId] uniqueidentifier NOT NULL,
+    [OrderDate] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [Notes] nvarchar(500) NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Order_TotalPrice] CHECK ([TotalPrice] >= 0),
+    CONSTRAINT [FK_Orders_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:07:26.572 +00:00 [ERR] Failed executing DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [SKU] nvarchar(50) NOT NULL,
+    [Name] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL DEFAULT 0,
+    [Status] int NOT NULL DEFAULT 1,
+    [CategoryId] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [RowVersion] rowversion NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Product_Price] CHECK ([Price] > 0),
+    CONSTRAINT [CK_Product_Quantity] CHECK ([Quantity] >= 0),
+    CONSTRAINT [FK_Products_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Products_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:56:20.269 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:56:20.320 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:56:20.912 +00:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:56:20.945 +00:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:56:20.947 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:56:20.948 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:56:20.976 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 09:56:20.991 +00:00 [INF] Applying migration '20251213085004_InitialCreate'.
+2025-12-13 09:56:21.078 +00:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ApplicationUsers] (
+    [Id] uniqueidentifier NOT NULL,
+    [Email] nvarchar(256) NOT NULL,
+    [Username] nvarchar(100) NOT NULL,
+    [FullName] nvarchar(200) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [PhoneNumber] nvarchar(20) NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [LastLoginAt] datetime2 NULL,
+    [IsActive] bit NOT NULL DEFAULT CAST(1 AS bit),
+    CONSTRAINT [PK_ApplicationUsers] PRIMARY KEY ([Id])
+);
+2025-12-13 09:56:21.085 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Carts] (
+    [Id] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [LastModifiedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Carts] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Carts_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:56:21.089 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(100) NOT NULL,
+    [Description] nvarchar(500) NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Categories_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:56:21.097 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Orders] (
+    [Id] uniqueidentifier NOT NULL,
+    [OrderNumber] nvarchar(50) NOT NULL,
+    [TotalPrice] decimal(18,2) NOT NULL DEFAULT 0.0,
+    [Status] int NOT NULL DEFAULT 1,
+    [UserId] uniqueidentifier NOT NULL,
+    [OrderDate] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [Notes] nvarchar(500) NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Orders] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Order_TotalPrice] CHECK ([TotalPrice] >= 0),
+    CONSTRAINT [FK_Orders_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:56:21.120 +00:00 [ERR] Failed executing DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] uniqueidentifier NOT NULL,
+    [SKU] nvarchar(50) NOT NULL,
+    [Name] nvarchar(200) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [Quantity] int NOT NULL DEFAULT 0,
+    [Status] int NOT NULL DEFAULT 1,
+    [CategoryId] uniqueidentifier NOT NULL,
+    [UserId] uniqueidentifier NOT NULL,
+    [RowVersion] rowversion NULL,
+    [CreatedBy] nvarchar(256) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL DEFAULT (GETUTCDATE()),
+    [UpdatedAt] datetime2 NULL,
+    [UpdatedBy] nvarchar(max) NULL,
+    [IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id]),
+    CONSTRAINT [CK_Product_Price] CHECK ([Price] > 0),
+    CONSTRAINT [CK_Product_Quantity] CHECK ([Quantity] >= 0),
+    CONSTRAINT [FK_Products_ApplicationUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [ApplicationUsers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Products_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE
+);
+2025-12-13 09:57:04.615 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:04.642 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:04.751 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:04.751 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:05.605 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:57:05.625 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:57:05.638 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 09:57:22.782 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:22.806 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:23.162 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:57:23.179 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:57:23.181 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:57:23.181 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:57:23.193 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 09:57:23.200 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 09:57:42.464 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:42.602 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:57:44.284 +00:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:57:44.405 +00:00 [INF] Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:57:44.438 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:57:44.453 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:57:44.512 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 09:57:44.565 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 09:57:45.122 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 09:57:45.872 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 09:57:45.879 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 09:57:46.136 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 09:57:46.142 +00:00 [INF] Hosting environment: Development
+2025-12-13 09:57:46.147 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 09:57:47.844 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:57:51.849 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 4021.9889ms
+2025-12-13 09:57:51.878 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:58:30.957 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:58:31.006 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 58.9815ms
+2025-12-13 09:58:31.022 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:58:35.244 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:58:35.265 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 22.2654ms
+2025-12-13 09:58:35.279 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:58:39.299 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:58:39.342 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 48.0043ms
+2025-12-13 09:58:39.353 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:58:54.285 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:58:54.300 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 16.2729ms
+2025-12-13 09:58:54.309 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:58:57.679 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:58:57.701 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 21.868ms
+2025-12-13 09:58:57.717 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:59:09.529 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:59:09.648 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 09:59:11.087 +00:00 [INF] Executed DbCommand (118ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:59:11.204 +00:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:59:11.235 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 09:59:11.251 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 09:59:11.308 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 09:59:11.375 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 09:59:11.723 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 09:59:12.398 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 09:59:12.404 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 09:59:12.674 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 09:59:12.679 +00:00 [INF] Hosting environment: Development
+2025-12-13 09:59:12.682 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 09:59:14.083 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:59:14.640 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 568.8056ms
+2025-12-13 09:59:14.667 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:59:17.873 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:59:17.902 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 29.1284ms
+2025-12-13 09:59:17.919 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:59:22.961 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:59:22.983 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 22.0445ms
+2025-12-13 09:59:22.992 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 09:59:26.209 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 09:59:26.225 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 16.3035ms
+2025-12-13 09:59:26.235 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 10:07:15.754 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 10:07:15.882 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 10:07:17.396 +00:00 [INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 10:07:17.557 +00:00 [INF] Executed DbCommand (81ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 10:07:17.590 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 10:07:17.602 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 10:07:17.648 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 10:07:17.693 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 10:07:18.013 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 10:07:18.489 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 10:07:18.493 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 10:07:18.715 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 10:07:18.718 +00:00 [INF] Hosting environment: Development
+2025-12-13 10:07:18.721 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 10:07:19.563 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 10:07:20.088 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 540.1726ms
+2025-12-13 10:07:20.105 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 10:10:34.175 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 10:10:34.307 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 10:10:35.638 +00:00 [INF] Executed DbCommand (100ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 10:10:35.720 +00:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 10:10:35.737 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 10:10:35.747 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 10:10:35.791 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 10:10:35.853 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 10:10:36.162 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 10:10:36.660 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 10:10:36.663 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 10:10:36.946 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 10:10:36.950 +00:00 [INF] Hosting environment: Development
+2025-12-13 10:10:36.953 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 10:10:37.505 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 10:10:38.063 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 570.8447ms
+2025-12-13 10:10:38.079 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 10:13:28.087 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 10:13:28.219 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 10:13:29.460 +00:00 [INF] Executed DbCommand (97ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 10:13:29.623 +00:00 [INF] Executed DbCommand (75ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 10:13:29.651 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 10:13:29.663 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 10:13:29.725 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 10:13:29.782 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 10:13:30.100 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 10:13:30.656 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 10:13:30.659 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 10:13:30.940 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 10:13:30.943 +00:00 [INF] Hosting environment: Development
+2025-12-13 10:13:30.946 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 10:13:31.942 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 10:13:32.378 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 447.9325ms
+2025-12-13 10:13:32.411 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 11:06:51.042 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 11:06:51.245 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 11:06:52.797 +00:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 11:06:52.912 +00:00 [INF] Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 11:06:52.930 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 11:06:52.942 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 11:06:52.993 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 11:06:53.039 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 11:06:53.382 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 11:06:54.011 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 11:06:54.016 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 11:06:54.252 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 11:06:54.256 +00:00 [INF] Hosting environment: Development
+2025-12-13 11:06:54.263 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 11:06:54.888 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 11:06:55.637 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 759.9357ms
+2025-12-13 11:06:55.664 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 11:07:00.050 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 11:07:00.092 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 41.8678ms
+2025-12-13 11:07:00.112 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 11:07:01.078 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 11:07:01.111 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 33.5659ms
+2025-12-13 11:07:01.132 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 11:07:01.466 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 11:07:01.481 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 15.4985ms
+2025-12-13 11:07:01.491 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 19:09:28.951 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:09:29.039 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:09:30.230 +00:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:09:30.312 +00:00 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:09:30.324 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:09:30.333 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:09:30.367 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 19:09:30.393 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 19:09:30.604 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 19:09:31.083 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 19:09:31.085 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 19:09:31.356 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 19:09:31.359 +00:00 [INF] Hosting environment: Development
+2025-12-13 19:09:31.362 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 19:09:32.241 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 19:09:32.792 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 566.016ms
+2025-12-13 19:09:32.807 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 19:17:08.953 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:17:09.071 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:17:10.268 +00:00 [INF] Executed DbCommand (79ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:17:10.398 +00:00 [INF] Executed DbCommand (84ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:17:10.415 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:17:10.427 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:17:10.524 +00:00 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 19:17:10.598 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 19:17:11.156 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 19:17:11.775 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 19:17:11.782 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 19:17:12.039 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 19:17:12.042 +00:00 [INF] Hosting environment: Development
+2025-12-13 19:17:12.045 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 19:17:12.609 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 19:17:13.077 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 486.9099ms
+2025-12-13 19:17:13.095 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 19:17:17.663 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 19:17:17.693 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 29.9824ms
+2025-12-13 19:17:17.709 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 19:17:18.834 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 19:17:18.856 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 21.3905ms
+2025-12-13 19:17:18.870 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 19:17:19.087 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 19:17:19.103 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 16.6883ms
+2025-12-13 19:17:19.120 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 19:17:19.731 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 19:17:19.753 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 23.7633ms
+2025-12-13 19:17:19.769 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 19:17:19.908 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 19:17:19.920 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 12.3374ms
+2025-12-13 19:17:19.931 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 19:17:20.089 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 19:17:20.102 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 12.936ms
+2025-12-13 19:17:20.112 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 19:17:20.275 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 19:17:20.289 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 13.9782ms
+2025-12-13 19:17:20.301 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 19:17:20.503 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 19:17:20.519 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 16.0294ms
+2025-12-13 19:17:20.532 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 19:18:22.034 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:18:22.150 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:18:23.195 +00:00 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:18:23.308 +00:00 [INF] Executed DbCommand (68ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:18:23.319 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:18:23.326 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:18:23.366 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 19:18:23.409 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 19:18:23.674 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 19:18:24.085 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 19:18:24.088 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 19:18:24.314 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 19:18:24.319 +00:00 [INF] Hosting environment: Development
+2025-12-13 19:18:24.330 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 19:18:24.804 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 19:18:25.233 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 442.2297ms
+2025-12-13 19:18:25.251 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 19:25:01.651 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:25:01.783 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:25:03.154 +00:00 [INF] Executed DbCommand (69ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:25:03.382 +00:00 [INF] Executed DbCommand (143ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:25:03.414 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:25:03.431 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:25:03.520 +00:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 19:25:03.586 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 19:25:04.070 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 19:25:04.489 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 19:25:04.732 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 19:25:04.736 +00:00 [INF] Hosting environment: Development
+2025-12-13 19:25:04.738 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 19:25:04.822 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5124/swagger - null null
+2025-12-13 19:25:05.219 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-12-13 19:25:05.463 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5124/swagger - 404 0 null 654.0825ms
+2025-12-13 19:25:05.480 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5124/swagger, Response status code: 404
+2025-12-13 19:32:48.939 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:32:48.999 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:32:49.515 +00:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:32:49.590 +00:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:32:49.601 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:32:49.609 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:32:49.644 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 19:32:49.676 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 19:32:49.769 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 19:32:49.848 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 19:32:49.947 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 19:32:49.951 +00:00 [INF] Hosting environment: Development
+2025-12-13 19:32:49.953 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 19:32:50.531 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5124/swagger - null null
+2025-12-13 19:32:50.818 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-12-13 19:32:50.889 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5124/swagger - 404 0 null 363.5656ms
+2025-12-13 19:32:50.906 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5124/swagger, Response status code: 404
+2025-12-13 19:34:45.573 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5124/ - null null
+2025-12-13 19:34:45.608 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5124/ - 301 0 null 34.6068ms
+2025-12-13 19:34:45.626 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5124/index.html - null null
+2025-12-13 19:34:45.792 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5124/index.html - 200 null text/html;charset=utf-8 165.0808ms
+2025-12-13 19:34:45.795 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5124/swagger-ui-bundle.js - null null
+2025-12-13 19:34:45.796 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5124/swagger-ui-standalone-preset.js - null null
+2025-12-13 19:34:45.803 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5124/swagger-ui.css - null null
+2025-12-13 19:34:45.831 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5124/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-13 19:34:45.854 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-12-13 19:34:45.854 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-12-13 19:34:45.855 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5124/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 24.7278ms
+2025-12-13 19:34:45.862 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5124/swagger-ui-standalone-preset.js - 200 230280 text/javascript 65.8781ms
+2025-12-13 19:34:45.864 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5124/swagger-ui.css - 200 152034 text/css 60.8487ms
+2025-12-13 19:34:45.887 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5124/_vs/browserLink - null null
+2025-12-13 19:34:45.906 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-12-13 19:34:45.917 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5124/swagger-ui-bundle.js - 200 1456926 text/javascript 121.7944ms
+2025-12-13 19:34:45.994 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5124/_vs/browserLink - 200 null text/javascript; charset=UTF-8 106.8521ms
+2025-12-13 19:34:46.053 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5124/swagger/v1/swagger.json - null null
+2025-12-13 19:34:46.085 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5124/favicon-32x32.png - null null
+2025-12-13 19:34:46.094 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-12-13 19:34:46.100 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5124/favicon-32x32.png - 200 628 image/png 14.4916ms
+2025-12-13 19:34:46.233 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5124/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 179.5864ms
+2025-12-13 19:36:03.378 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:5124/api/v1/Auth/register - application/json 65
+2025-12-13 19:36:03.399 +00:00 [INF] CORS policy execution successful.
+2025-12-13 19:36:03.421 +00:00 [INF] Executing endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 19:36:03.521 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Production.Grade.WebApi.Application.DTOs.RegisterDto) on controller Production.Grade.WebApi.API.Controllers.AuthController (Production-Grade-Web-API).
+2025-12-13 19:36:03.758 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Production.Grade.WebApi.API.Common.ApiResponse'.
+2025-12-13 19:36:03.790 +00:00 [INF] Executed action Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API) in 239.5205ms
+2025-12-13 19:36:03.875 +00:00 [INF] Executed endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 19:36:03.952 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:5124/api/v1/Auth/register - 400 null application/json; charset=utf-8 570.2845ms
+2025-12-13 19:38:01.647 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:5124/api/v1/Auth/register - application/json 65
+2025-12-13 19:38:01.660 +00:00 [INF] CORS policy execution successful.
+2025-12-13 19:38:01.794 +00:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+ ---> Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(String encodedJson)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+   --- End of inner exception stack trace ---
+2025-12-13 19:38:01.882 +00:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2025-12-13 19:38:01.885 +00:00 [INF] Executing endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 19:38:01.888 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Production.Grade.WebApi.Application.DTOs.RegisterDto) on controller Production.Grade.WebApi.API.Controllers.AuthController (Production-Grade-Web-API).
+2025-12-13 19:38:01.901 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Production.Grade.WebApi.API.Common.ApiResponse'.
+2025-12-13 19:38:01.906 +00:00 [INF] Executed action Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API) in 13.2161ms
+2025-12-13 19:38:01.910 +00:00 [INF] Executed endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 19:38:01.914 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:5124/api/v1/Auth/register - 400 null application/json; charset=utf-8 267.4549ms
+2025-12-13 19:42:22.873 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:42:22.972 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:42:23.961 +00:00 [INF] Executed DbCommand (97ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:42:24.123 +00:00 [INF] Executed DbCommand (91ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:42:24.145 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:42:24.155 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:42:24.224 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 19:42:24.302 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 19:42:24.599 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 19:42:24.805 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 19:42:25.021 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 19:42:25.024 +00:00 [INF] Hosting environment: Development
+2025-12-13 19:42:25.029 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 19:42:25.078 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5124/swagger - null null
+2025-12-13 19:42:25.308 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-12-13 19:42:25.353 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5124/swagger - 404 0 null 277.3254ms
+2025-12-13 19:42:25.367 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5124/swagger, Response status code: 404
+2025-12-13 19:50:33.151 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:50:33.321 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:50:34.604 +00:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:50:34.757 +00:00 [INF] Executed DbCommand (107ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:50:34.778 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:50:34.795 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:50:34.847 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 19:50:34.897 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 19:50:35.172 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 19:50:35.534 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 19:50:35.765 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 19:50:35.778 +00:00 [INF] Hosting environment: Development
+2025-12-13 19:50:35.782 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 19:50:36.237 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:5124/swagger - null null
+2025-12-13 19:50:36.553 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-12-13 19:50:36.739 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:5124/swagger - 404 0 null 519.66ms
+2025-12-13 19:50:36.756 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5124/swagger, Response status code: 404
+2025-12-13 19:51:35.360 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:51:35.465 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:51:36.753 +00:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:51:36.907 +00:00 [INF] Executed DbCommand (103ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:51:36.925 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:51:36.936 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:51:36.978 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 19:51:37.024 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 19:51:37.303 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 19:51:37.753 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 19:51:37.756 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 19:51:37.973 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 19:51:37.976 +00:00 [INF] Hosting environment: Development
+2025-12-13 19:51:37.980 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 19:51:38.753 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 19:51:39.345 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 604.3381ms
+2025-12-13 19:51:39.368 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 19:51:49.179 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/index.html - null null
+2025-12-13 19:51:49.220 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/index.html - 404 0 null 41.5918ms
+2025-12-13 19:51:49.242 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/swagger/index.html, Response status code: 404
+2025-12-13 19:54:52.908 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:54:53.025 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:54:54.294 +00:00 [INF] Executed DbCommand (115ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:54:54.475 +00:00 [INF] Executed DbCommand (114ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:54:54.493 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:54:54.506 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:54:54.558 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 19:54:54.610 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 19:54:54.907 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 19:54:55.451 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 19:54:55.456 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 19:54:55.723 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 19:54:55.727 +00:00 [INF] Hosting environment: Development
+2025-12-13 19:54:55.730 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 19:54:56.125 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/Swagger - null null
+2025-12-13 19:54:56.669 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/Swagger - 404 0 null 559.6095ms
+2025-12-13 19:54:56.687 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/Swagger, Response status code: 404
+2025-12-13 19:55:54.965 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:55:55.181 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 19:55:56.762 +00:00 [INF] Executed DbCommand (68ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:55:56.874 +00:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:55:56.919 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 19:55:56.932 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 19:55:56.980 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 19:55:57.032 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 19:55:57.307 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 19:55:57.739 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 19:55:57.743 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 19:55:57.975 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 19:55:57.978 +00:00 [INF] Hosting environment: Development
+2025-12-13 19:55:57.981 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 19:55:58.270 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/ - null null
+2025-12-13 19:55:58.637 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/ - 301 0 null 381.4433ms
+2025-12-13 19:55:58.647 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/index.html - null null
+2025-12-13 19:55:58.852 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/index.html - 200 null text/html;charset=utf-8 205.2678ms
+2025-12-13 19:55:58.861 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-13 19:55:58.859 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger-ui-bundle.js - null null
+2025-12-13 19:55:58.859 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger-ui-standalone-preset.js - null null
+2025-12-13 19:55:58.859 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger-ui.css - null null
+2025-12-13 19:55:58.913 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 52.8074ms
+2025-12-13 19:55:59.014 +00:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-12-13 19:55:59.014 +00:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-12-13 19:55:59.029 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger-ui-standalone-preset.js - 200 230280 text/javascript 169.4773ms
+2025-12-13 19:55:59.031 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger-ui.css - 200 152034 text/css 171.8917ms
+2025-12-13 19:55:59.031 +00:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-12-13 19:55:59.036 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-12-13 19:55:59.053 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger-ui-bundle.js - 200 1456926 text/javascript 194.1121ms
+2025-12-13 19:55:59.153 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 118.3794ms
+2025-12-13 19:55:59.214 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-12-13 19:55:59.235 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/favicon-32x32.png - null null
+2025-12-13 19:55:59.245 +00:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-12-13 19:55:59.249 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/favicon-32x32.png - 200 628 image/png 14.4928ms
+2025-12-13 19:55:59.369 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 156.6274ms
+2025-12-13 19:58:24.363 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/v1/Auth/login - application/json 2
+2025-12-13 19:58:24.401 +00:00 [INF] CORS policy execution successful.
+2025-12-13 19:58:24.611 +00:00 [INF] Executing endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Login (Production-Grade-Web-API)'
+2025-12-13 19:58:24.707 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Production.Grade.WebApi.Application.DTOs.LoginDto) on controller Production.Grade.WebApi.API.Controllers.AuthController (Production-Grade-Web-API).
+2025-12-13 19:58:24.850 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-12-13 19:58:24.922 +00:00 [INF] Executed action Production.Grade.WebApi.API.Controllers.AuthController.Login (Production-Grade-Web-API) in 196.0158ms
+2025-12-13 19:58:24.929 +00:00 [INF] Executed endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Login (Production-Grade-Web-API)'
+2025-12-13 19:58:24.938 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/v1/Auth/login - 400 null application/problem+json; charset=utf-8 576.4161ms
+2025-12-13 19:58:41.808 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/v1/Auth/login - application/json 2
+2025-12-13 19:58:41.832 +00:00 [INF] CORS policy execution successful.
+2025-12-13 19:58:41.839 +00:00 [INF] Executing endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Login (Production-Grade-Web-API)'
+2025-12-13 19:58:41.846 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Production.Grade.WebApi.Application.DTOs.LoginDto) on controller Production.Grade.WebApi.API.Controllers.AuthController (Production-Grade-Web-API).
+2025-12-13 19:58:41.863 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-12-13 19:58:41.869 +00:00 [INF] Executed action Production.Grade.WebApi.API.Controllers.AuthController.Login (Production-Grade-Web-API) in 13.5931ms
+2025-12-13 19:58:41.873 +00:00 [INF] Executed endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Login (Production-Grade-Web-API)'
+2025-12-13 19:58:41.876 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/v1/Auth/login - 400 null application/problem+json; charset=utf-8 69.1253ms
+2025-12-13 19:58:43.574 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/v1/Auth/login - application/json 2
+2025-12-13 19:58:43.583 +00:00 [INF] CORS policy execution successful.
+2025-12-13 19:58:43.594 +00:00 [INF] Executing endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Login (Production-Grade-Web-API)'
+2025-12-13 19:58:43.599 +00:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Production.Grade.WebApi.Application.DTOs.LoginDto) on controller Production.Grade.WebApi.API.Controllers.AuthController (Production-Grade-Web-API).
+2025-12-13 19:58:43.617 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-12-13 19:58:43.622 +00:00 [INF] Executed action Production.Grade.WebApi.API.Controllers.AuthController.Login (Production-Grade-Web-API) in 16.1103ms
+2025-12-13 19:58:43.627 +00:00 [INF] Executed endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Login (Production-Grade-Web-API)'
+2025-12-13 19:58:43.630 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/v1/Auth/login - 400 null application/problem+json; charset=utf-8 56.1879ms
+2025-12-13 19:59:46.799 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/v1/Auth/register - application/json 50
+2025-12-13 19:59:46.820 +00:00 [INF] CORS policy execution successful.
+2025-12-13 19:59:46.823 +00:00 [INF] Executing endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 19:59:46.841 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Production.Grade.WebApi.Application.DTOs.RegisterDto) on controller Production.Grade.WebApi.API.Controllers.AuthController (Production-Grade-Web-API).
+2025-12-13 19:59:46.895 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Production.Grade.WebApi.API.Common.ApiResponse'.
+2025-12-13 19:59:46.913 +00:00 [INF] Executed action Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API) in 65.5805ms
+2025-12-13 19:59:46.917 +00:00 [INF] Executed endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 19:59:46.920 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/v1/Auth/register - 400 null application/json; charset=utf-8 127.6607ms
+2025-12-13 20:02:19.041 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 20:02:19.263 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 20:02:20.675 +00:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 20:02:20.779 +00:00 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 20:02:20.807 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 20:02:20.834 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 20:02:20.913 +00:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 20:02:21.036 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 20:02:21.343 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 20:02:21.851 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 20:02:21.858 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 20:02:22.066 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 20:02:22.070 +00:00 [INF] Hosting environment: Development
+2025-12-13 20:02:22.073 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 20:02:22.411 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/index.html - null null
+2025-12-13 20:02:23.002 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/index.html - 200 null text/html;charset=utf-8 605.0261ms
+2025-12-13 20:02:23.036 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-13 20:02:23.036 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-12-13 20:02:23.081 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 48.1874ms
+2025-12-13 20:02:23.178 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 143.2773ms
+2025-12-13 20:02:23.219 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-12-13 20:02:23.386 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 166.6711ms
+2025-12-13 20:02:44.412 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/v1/Auth/register - application/json 50
+2025-12-13 20:02:44.474 +00:00 [INF] CORS policy execution successful.
+2025-12-13 20:02:44.724 +00:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-12-13 20:02:44.764 +00:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-12-13 20:02:44.783 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/v1/Auth/register - 401 0 null 371.0598ms
+2025-12-13 20:04:50.653 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/v1/Auth/register - application/json 192
+2025-12-13 20:04:50.676 +00:00 [INF] CORS policy execution successful.
+2025-12-13 20:04:50.687 +00:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-12-13 20:04:50.693 +00:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-12-13 20:04:50.698 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/v1/Auth/register - 401 0 null 46.8608ms
+2025-12-13 20:11:14.846 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 20:11:15.026 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 20:11:16.575 +00:00 [INF] Executed DbCommand (86ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 20:11:16.737 +00:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 20:11:16.779 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 20:11:16.799 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 20:11:16.869 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 20:11:16.969 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 20:11:17.293 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 20:11:17.735 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 20:11:17.742 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 20:11:17.965 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 20:11:17.969 +00:00 [INF] Hosting environment: Development
+2025-12-13 20:11:17.973 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 20:11:18.451 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/index.html - null null
+2025-12-13 20:11:18.989 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-13 20:11:18.992 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/index.html - 200 null text/html;charset=utf-8 552.4161ms
+2025-12-13 20:11:19.021 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-12-13 20:11:19.032 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 43.1319ms
+2025-12-13 20:11:19.156 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 135.5882ms
+2025-12-13 20:11:19.214 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-12-13 20:11:19.416 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 202.3426ms
+2025-12-13 20:11:46.851 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/v1/Auth/register - application/json 50
+2025-12-13 20:11:46.890 +00:00 [INF] CORS policy execution successful.
+2025-12-13 20:11:47.040 +00:00 [INF] Executing endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 20:11:47.107 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Production.Grade.WebApi.Application.DTOs.RegisterDto) on controller Production.Grade.WebApi.API.Controllers.AuthController (Production-Grade-Web-API).
+2025-12-13 20:11:47.379 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Production.Grade.WebApi.API.Common.ApiResponse'.
+2025-12-13 20:11:47.419 +00:00 [INF] Executed action Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API) in 294.3723ms
+2025-12-13 20:11:47.427 +00:00 [INF] Executed endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 20:11:47.436 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/v1/Auth/register - 400 null application/json; charset=utf-8 585.9939ms
+2025-12-13 20:12:03.197 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/v1/Auth/register - application/json 188
+2025-12-13 20:12:03.216 +00:00 [INF] CORS policy execution successful.
+2025-12-13 20:12:03.224 +00:00 [INF] Executing endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 20:12:03.230 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Production.Grade.WebApi.Application.DTOs.RegisterDto) on controller Production.Grade.WebApi.API.Controllers.AuthController (Production-Grade-Web-API).
+2025-12-13 20:12:03.248 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Production.Grade.WebApi.API.Common.ApiResponse'.
+2025-12-13 20:12:03.256 +00:00 [INF] Executed action Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API) in 15.0321ms
+2025-12-13 20:12:03.261 +00:00 [INF] Executed endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 20:12:03.267 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/v1/Auth/register - 400 null application/json; charset=utf-8 69.4015ms
+2025-12-13 20:12:13.790 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/v1/Auth/register - application/json 188
+2025-12-13 20:12:13.805 +00:00 [INF] CORS policy execution successful.
+2025-12-13 20:12:13.818 +00:00 [INF] Executing endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 20:12:13.826 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Production.Grade.WebApi.Application.DTOs.RegisterDto) on controller Production.Grade.WebApi.API.Controllers.AuthController (Production-Grade-Web-API).
+2025-12-13 20:12:13.853 +00:00 [INF] Executing BadRequestObjectResult, writing value of type 'Production.Grade.WebApi.API.Common.ApiResponse'.
+2025-12-13 20:12:13.861 +00:00 [INF] Executed action Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API) in 19.0155ms
+2025-12-13 20:12:13.871 +00:00 [INF] Executed endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 20:12:13.879 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/v1/Auth/register - 400 null application/json; charset=utf-8 88.8394ms
+2025-12-13 20:13:35.019 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 20:13:35.195 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 20:13:36.709 +00:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 20:13:36.847 +00:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 20:13:36.878 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 20:13:36.896 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 20:13:36.965 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 20:13:37.051 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 20:13:37.417 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 20:13:37.862 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 20:13:37.868 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 20:13:38.088 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 20:13:38.092 +00:00 [INF] Hosting environment: Development
+2025-12-13 20:13:38.097 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 20:13:38.755 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/index.html - null null
+2025-12-13 20:13:39.339 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/index.html - 200 null text/html;charset=utf-8 597.5394ms
+2025-12-13 20:13:39.404 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-13 20:13:39.404 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-12-13 20:13:39.423 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 18.9563ms
+2025-12-13 20:13:39.533 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 128.9436ms
+2025-12-13 20:13:39.591 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-12-13 20:13:39.746 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 157.7198ms
+2025-12-13 20:17:54.250 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 20:17:54.423 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 20:17:55.973 +00:00 [INF] Executed DbCommand (97ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 20:17:56.102 +00:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 20:17:56.146 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 20:17:56.167 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 20:17:56.225 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 20:17:56.280 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 20:17:56.572 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 20:17:57.126 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 20:17:57.134 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 20:17:57.375 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 20:17:57.379 +00:00 [INF] Hosting environment: Development
+2025-12-13 20:17:57.383 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 20:17:57.737 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/index.html - null null
+2025-12-13 20:17:58.280 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/index.html - 200 null text/html;charset=utf-8 563.0811ms
+2025-12-13 20:17:58.347 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-13 20:17:58.347 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-12-13 20:17:58.374 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 27.8464ms
+2025-12-13 20:17:58.478 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 131.8119ms
+2025-12-13 20:17:58.518 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-12-13 20:17:58.677 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 159.6251ms
+2025-12-13 20:19:00.011 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/v1/Auth/register - application/json 188
+2025-12-13 20:19:00.059 +00:00 [INF] CORS policy execution successful.
+2025-12-13 20:19:00.204 +00:00 [INF] Executing endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 20:19:00.292 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Production.Grade.WebApi.Application.DTOs.RegisterDto) on controller Production.Grade.WebApi.API.Controllers.AuthController (Production-Grade-Web-API).
+2025-12-13 20:19:01.331 +00:00 [ERR] Failed executing DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreatedAt], [a].[Email], [a].[FullName], [a].[IsActive], [a].[LastLoginAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[Username]
+FROM [ApplicationUsers] AS [a]
+2025-12-13 20:19:01.419 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Production.Grade.WebApi.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'ApplicationUsers'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:fff2717b-87cb-4f0d-8b44-49d0ac47f183
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'ApplicationUsers'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:fff2717b-87cb-4f0d-8b44-49d0ac47f183
+Error Number:208,State:1,Class:16
+2025-12-13 20:19:01.938 +00:00 [INF] Executed action Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API) in 1630.5182ms
+2025-12-13 20:19:01.969 +00:00 [INF] Executed endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 20:19:02.211 +00:00 [ERR] Unhandled exception: Invalid object name 'ApplicationUsers'.
+2025-12-13 20:19:02.366 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/v1/Auth/register - 500 null application/json; charset=utf-8 2355.3294ms
+2025-12-13 20:20:56.042 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-12-13 20:20:56.064 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 29.413ms
+2025-12-13 20:20:56.085 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-12-13 20:27:37.460 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-12-13 20:27:37.483 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 22.7865ms
+2025-12-13 20:27:37.506 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-12-13 20:31:14.937 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 20:31:15.096 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 20:31:16.618 +00:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 20:31:16.750 +00:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 20:31:16.770 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 20:31:16.784 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 20:31:16.862 +00:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 20:31:16.927 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 20:31:17.283 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 20:31:17.706 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 20:31:17.710 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 20:31:17.964 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 20:31:17.966 +00:00 [INF] Hosting environment: Development
+2025-12-13 20:31:17.969 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 20:31:18.558 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/index.html - null null
+2025-12-13 20:31:19.156 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/index.html - 200 null text/html;charset=utf-8 615.688ms
+2025-12-13 20:31:19.225 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-13 20:31:19.225 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-12-13 20:31:19.251 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 25.9221ms
+2025-12-13 20:31:19.344 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 119.5058ms
+2025-12-13 20:31:19.388 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-12-13 20:31:19.533 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 146.5015ms
+2025-12-13 20:32:00.929 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/v1/Auth/register - application/json 183
+2025-12-13 20:32:00.963 +00:00 [INF] CORS policy execution successful.
+2025-12-13 20:32:01.130 +00:00 [INF] Executing endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 20:32:01.232 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Production.Grade.WebApi.Application.DTOs.RegisterDto) on controller Production.Grade.WebApi.API.Controllers.AuthController (Production-Grade-Web-API).
+2025-12-13 20:32:01.961 +00:00 [ERR] Failed executing DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreatedAt], [a].[Email], [a].[FullName], [a].[IsActive], [a].[LastLoginAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[Username]
+FROM [ApplicationUsers] AS [a]
+2025-12-13 20:32:02.027 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Production.Grade.WebApi.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'ApplicationUsers'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:820078ca-18d2-48e7-8daa-8b4746b16c36
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'ApplicationUsers'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:820078ca-18d2-48e7-8daa-8b4746b16c36
+Error Number:208,State:1,Class:16
+2025-12-13 20:32:02.388 +00:00 [INF] Executed action Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API) in 1139.376ms
+2025-12-13 20:32:02.398 +00:00 [INF] Executed endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 20:32:02.607 +00:00 [ERR] Unhandled exception: Invalid object name 'ApplicationUsers'.
+2025-12-13 20:32:02.671 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/v1/Auth/register - 500 null application/json; charset=utf-8 1745.0296ms
+2025-12-13 20:33:37.559 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/.well-known/appspecific/com.chrome.devtools.json - null null
+2025-12-13 20:33:37.593 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 34.0259ms
+2025-12-13 20:33:37.622 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7219/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2025-12-13 20:37:29.553 +00:00 [WRN] The 'OrderStatus' property 'Status' on entity type 'Order' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'OrderStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 20:37:29.596 +00:00 [WRN] The 'ProductStatus' property 'Status' on entity type 'Product' is configured with a database-generated default, but has no configured sentinel value. The database-generated default will always be used for inserts when the property has the value '0', since this is the CLR default for the 'ProductStatus' type. Consider using a nullable type, using a nullable backing field, or setting the sentinel value for the property to ensure the database default is used when, and only when, appropriate. See https://aka.ms/efcore-docs-default-values for more information.
+2025-12-13 20:37:30.098 +00:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 20:37:30.149 +00:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 20:37:30.161 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-13 20:37:30.172 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-13 20:37:30.194 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-13 20:37:30.222 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-12-13 20:37:30.403 +00:00 [INF] User profile is available. Using 'C:\Users\aolan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-13 20:37:30.694 +00:00 [INF] Now listening on: https://localhost:7219
+2025-12-13 20:37:30.697 +00:00 [INF] Now listening on: http://localhost:5124
+2025-12-13 20:37:30.783 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-13 20:37:30.787 +00:00 [INF] Hosting environment: Development
+2025-12-13 20:37:30.791 +00:00 [INF] Content root path: C:\Users\aolan\source\repos\Production-Grade-Web-API\Production-Grade-Web-API
+2025-12-13 20:37:31.836 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/index.html - null null
+2025-12-13 20:37:32.365 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/index.html - 200 null text/html;charset=utf-8 544.043ms
+2025-12-13 20:37:32.459 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_vs/browserLink - null null
+2025-12-13 20:37:32.459 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-13 20:37:32.520 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 61.2312ms
+2025-12-13 20:37:32.609 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/_vs/browserLink - 200 null text/javascript; charset=UTF-8 150.3513ms
+2025-12-13 20:37:32.666 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - null null
+2025-12-13 20:37:32.874 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7219/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 208.3703ms
+2025-12-13 20:39:17.723 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7219/api/v1/Auth/register - application/json 182
+2025-12-13 20:39:17.762 +00:00 [INF] CORS policy execution successful.
+2025-12-13 20:39:17.958 +00:00 [INF] Executing endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 20:39:18.072 +00:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Production.Grade.WebApi.Application.DTOs.RegisterDto) on controller Production.Grade.WebApi.API.Controllers.AuthController (Production-Grade-Web-API).
+2025-12-13 20:39:19.143 +00:00 [ERR] Failed executing DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreatedAt], [a].[Email], [a].[FullName], [a].[IsActive], [a].[LastLoginAt], [a].[PasswordHash], [a].[PhoneNumber], [a].[Username]
+FROM [ApplicationUsers] AS [a]
+2025-12-13 20:39:19.246 +00:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Production.Grade.WebApi.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'ApplicationUsers'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3f8c81e9-c39e-41ba-918e-40902736e7b0
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'ApplicationUsers'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:3f8c81e9-c39e-41ba-918e-40902736e7b0
+Error Number:208,State:1,Class:16
+2025-12-13 20:39:19.684 +00:00 [INF] Executed action Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API) in 1592.3403ms
+2025-12-13 20:39:19.690 +00:00 [INF] Executed endpoint 'Production.Grade.WebApi.API.Controllers.AuthController.Register (Production-Grade-Web-API)'
+2025-12-13 20:39:19.901 +00:00 [ERR] Unhandled exception: Invalid object name 'ApplicationUsers'.
+2025-12-13 20:39:19.959 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7219/api/v1/Auth/register - 500 null application/json; charset=utf-8 2236.4518ms

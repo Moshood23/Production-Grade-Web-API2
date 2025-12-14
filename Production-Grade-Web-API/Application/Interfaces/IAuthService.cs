@@ -1,8 +1,8 @@
 ﻿namespace Production.Grade.WebApi.Application.Interfaces;
-
-using Production.Grade.WebApi.Application.Mappings;
+using AutoMapper;
+using Production.Grade.WebApi.Application.DTOs;
+using Production.Grade.WebApi.Application.Validators;
 using Production_Grade_Web_API.Application.DTOs;
-using Production_Grade_Web_API.Application.Validators;
 
 public interface IAuthService
 {

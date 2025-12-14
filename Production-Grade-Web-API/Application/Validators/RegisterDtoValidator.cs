@@ -1,4 +1,5 @@
-﻿using Production_Grade_Web_API.Application.DTOs;
+﻿using FluentValidation;
+using Production.Grade.WebApi.Application.DTOs;
 
 namespace Production.Grade.WebApi.Application.Validators;
 public class RegisterDtoValidator : AbstractValidator<RegisterDto>

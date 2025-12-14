@@ -1,11 +1,9 @@
 ﻿
-namespace Production.Grade.WebApi.Infrastructure.Services;
-
 using Microsoft.EntityFrameworkCore;
 using Production.Grade.WebApi.Application.Interfaces;
 using Production.Grade.WebApi.Infrastructure.Data;
-using Production_Grade_Web_API.Application.Interfaces;
 
+namespace Production.Grade.WebApi.Infrastructure.Services;
 public class OrderNumberGenerationService : IOrderNumberGenerationService
 {
     private readonly ApplicationDbContext _context;

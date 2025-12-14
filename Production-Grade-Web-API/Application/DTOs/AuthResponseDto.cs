@@ -1,5 +1,4 @@
-﻿
-namespace Production.Grade.WebApi.Application.Interfaces
+﻿namespace Production_Grade_Web_API.Application.DTOs
 {
     public class AuthResponseDto
     {
