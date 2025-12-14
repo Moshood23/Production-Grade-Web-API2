@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wYbrj7+Hy4A=",
+  "dgSpecHash": "q38F3ObGq7I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API\\Production-Grade-Web-API\\Production-Grade-Web-API.csproj",
+  "projectFilePath": "C:\\Users\\aolan\\source\\repos\\Production-Grade-Web-API2\\Production-Grade-Web-API\\Production-Grade-Web-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aolan\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\aolan\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
